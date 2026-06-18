@@ -3769,3 +3769,45 @@ button{font:inherit}
     width:57% !important;
   }
 }
+
+
+/* v35h9 mobile top-crop correction
+   Goal:
+   - remove the extra navy space above the woman's head on mobile
+   - keep the 2-line copy lower, closer to the sparkle level
+   - make the gold sprout/light line overlap the green + pink wave boundary
+   - keep desktop unchanged
+*/
+@media (max-width:640px) and (pointer:coarse){
+  .hero-visual{height:250px !important;min-height:250px !important;overflow:hidden !important;}
+  .hero-picture img{object-position:56% 9% !important;transform:scale(1.14) !important;transform-origin:56% 8% !important;}
+  .hero-copy{top:18.5% !important;left:5.4% !important;width:52% !important;max-width:205px !important;}
+  .hero-copy h1{font-size:22px !important;line-height:1.03 !important;}
+  .hero-gold-motif{left:-4.5% !important;bottom:-10px !important;width:110.5% !important;opacity:.96 !important;}
+  .hero-green-wave{height:14% !important;bottom:-8px !important;z-index:10 !important;}
+  .services-section{margin-top:-2px !important;padding-top:48px !important;}
+  .services-copy{margin-top:6px !important;}
+  .services-pink-sweep{top:-54px !important;width:56% !important;}
+}
+@media (max-width:430px) and (pointer:coarse){
+  .hero-visual{height:238px !important;min-height:238px !important;}
+  .hero-picture img{object-position:56.5% 8.5% !important;transform:scale(1.155) !important;transform-origin:56.5% 8% !important;}
+  .hero-copy{top:19.5% !important;left:5.2% !important;width:52% !important;max-width:198px !important;}
+  .hero-copy h1{font-size:21px !important;line-height:1.03 !important;}
+  .hero-gold-motif{left:-4.8% !important;bottom:-12px !important;width:111.5% !important;}
+  .hero-green-wave{height:14.5% !important;bottom:-9px !important;}
+  .services-section{padding-top:46px !important;}
+  .services-copy{margin-top:8px !important;}
+  .services-pink-sweep{top:-52px !important;width:57% !important;}
+}
+@media (max-width:390px) and (pointer:coarse){
+  .hero-visual{height:228px !important;min-height:228px !important;}
+  .hero-picture img{object-position:57% 8% !important;transform:scale(1.17) !important;transform-origin:57% 8% !important;}
+  .hero-copy{top:20.5% !important;left:5% !important;width:52% !important;max-width:190px !important;}
+  .hero-copy h1{font-size:20px !important;line-height:1.03 !important;}
+  .hero-gold-motif{left:-5.1% !important;bottom:-13px !important;width:112% !important;}
+  .hero-green-wave{height:15% !important;bottom:-10px !important;}
+  .services-section{padding-top:44px !important;}
+  .services-copy{margin-top:8px !important;}
+  .services-pink-sweep{top:-50px !important;width:58% !important;}
+}
