@@ -2688,3 +2688,109 @@ button{font:inherit}
     height:9.6% !important;
   }
 }
+
+
+/* v35h mobile FV refinement
+   - Shorter hero height by cropping top and bottom
+   - Woman larger on mobile
+   - Hero headline forced back to 2 lines
+*/
+@media (max-width:640px) and (pointer:coarse){
+  .hero-visual{
+    height:312px !important;
+    min-height:312px !important;
+    overflow:hidden !important;
+  }
+
+  .hero-picture img{
+    object-position:61% 16% !important;
+    transform:scale(1.25) !important;
+    transform-origin:61% 18% !important;
+  }
+
+  .hero-copy{
+    top:14% !important;
+    left:6% !important;
+    width:62% !important;
+    max-width:250px !important;
+  }
+
+  .hero-copy h1{
+    font-size:25px !important;
+    line-height:1.02 !important;
+  }
+
+  .hero-copy .hero-line{
+    display:block !important;
+    white-space:nowrap !important;
+  }
+
+  .hero-gold-motif{
+    left:-6% !important;
+    bottom:11.6% !important;
+    width:106% !important;
+  }
+
+  .hero-green-wave{
+    height:8.8% !important;
+  }
+}
+
+@media (max-width:430px) and (pointer:coarse){
+  .hero-visual{
+    height:300px !important;
+    min-height:300px !important;
+  }
+
+  .hero-picture img{
+    object-position:61.5% 16% !important;
+    transform:scale(1.27) !important;
+  }
+
+  .hero-copy{
+    top:13.8% !important;
+    width:63% !important;
+    max-width:240px !important;
+  }
+
+  .hero-copy h1{
+    font-size:24px !important;
+  }
+
+  .hero-gold-motif{
+    bottom:11.2% !important;
+  }
+
+  .hero-green-wave{
+    height:8.4% !important;
+  }
+}
+
+@media (max-width:390px) and (pointer:coarse){
+  .hero-visual{
+    height:286px !important;
+    min-height:286px !important;
+  }
+
+  .hero-picture img{
+    object-position:62% 16% !important;
+    transform:scale(1.29) !important;
+  }
+
+  .hero-copy{
+    width:64% !important;
+    max-width:230px !important;
+  }
+
+  .hero-copy h1{
+    font-size:22px !important;
+  }
+
+  .hero-gold-motif{
+    bottom:10.8% !important;
+  }
+
+  .hero-green-wave{
+    height:8.1% !important;
+  }
+}

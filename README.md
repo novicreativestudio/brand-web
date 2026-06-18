@@ -171,3 +171,10 @@ v35g final correction:
 - Upper navy crop is kept stable.
 - Lower navy / overall mobile FV height is shortened again.
 - Cache-busting strings updated to v35g1.
+
+
+v35h update:
+- Mobile FV hero cropped shorter vertically.
+- Woman enlarged by stronger mobile image scale and adjusted object-position.
+- Hero heading returned to 2 lines on mobile.
+- Cache version updated to v35h1.
