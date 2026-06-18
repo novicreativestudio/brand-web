@@ -134,3 +134,9 @@ v31 mobile redesign:
 - The mobile hero is now compact instead of extremely tall.
 - Hero headline, woman image, sprout, wave, Our Services, intro, and cards have dedicated mobile coordinates.
 - Service cards switch to a compact 2-column mobile poster layout similar to the supplied reference.
+
+
+v32 mobile hero tuning:
+- Reduced the amount of empty navy area at the top of the mobile hero.
+- Moved the heading down so it sits closer to the woman's shoulder level.
+- Raised the gold sprout motif and the wave line on mobile.
