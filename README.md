@@ -128,3 +128,9 @@ v30 mobile correction:
 - Based on v29.
 - Added final iPhone/mobile overrides so the pink ribbon, header, hero text, woman image, sprout, wave, services intro, and service cards have a dedicated vertical mobile layout.
 - Desktop zoom-stability rules remain for pointer:fine devices.
+
+v31 mobile redesign:
+- Added final hard mobile overrides to fix the iPhone layout.
+- The mobile hero is now compact instead of extremely tall.
+- Hero headline, woman image, sprout, wave, Our Services, intro, and cards have dedicated mobile coordinates.
+- Service cards switch to a compact 2-column mobile poster layout similar to the supplied reference.
