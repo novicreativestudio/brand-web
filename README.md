@@ -140,3 +140,10 @@ v32 mobile hero tuning:
 - Reduced the amount of empty navy area at the top of the mobile hero.
 - Moved the heading down so it sits closer to the woman's shoulder level.
 - Raised the gold sprout motif and the wave line on mobile.
+
+v33 final mobile refinement:
+- Made the mobile hero shorter by trimming the upper/lower visual rhythm.
+- Enlarged the woman image on mobile using mobile-only crop/scale rules.
+- Lowered the headline so it starts around the woman's shoulder/upper-body height.
+- Raised the gold sprout motif and wave line.
+- Restored full mobile logo lockup: NOVI + CREATIVE STUDIO.

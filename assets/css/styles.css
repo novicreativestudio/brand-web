@@ -1533,3 +1533,302 @@ button{font:inherit}
     bottom:6.8%;
   }
 }
+
+
+/* v33 final mobile refinement
+   Goal:
+   - make the mobile FV shorter and more polished
+   - enlarge the woman image
+   - place the headline from the left around the woman's shoulder/upper-body height
+   - raise the gold sprout and wave
+   - show the full brand name: NOVI + CREATIVE STUDIO
+*/
+@media (max-width:640px) and (pointer:coarse){
+  html,body{
+    overflow-x:hidden;
+  }
+
+  .top-ribbon{
+    height:38px;
+    padding:0 8px;
+  }
+  .top-ribbon p{
+    font-size:clamp(7.8px,2.25vw,9.6px);
+    letter-spacing:.145em;
+    white-space:nowrap;
+    transform:none;
+  }
+  .top-ribbon p::before{left:-11px}
+  .top-ribbon p::after{right:-11px}
+  .ribbon-drop{
+    width:16px;
+    height:34px;
+    bottom:-18px;
+  }
+
+  .site-header{
+    min-height:108px;
+    padding:0 22px;
+  }
+  .brand{
+    gap:11px;
+    min-width:0;
+  }
+  .brand-mark{
+    width:60px;
+    height:60px;
+    flex:0 0 auto;
+  }
+  .brand-text{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:center;
+    min-width:0;
+    transform:translateY(1px);
+  }
+  .brand-text strong{
+    font-size:clamp(30px,9.4vw,37px);
+    line-height:.95;
+    letter-spacing:.19em;
+  }
+  .brand-text small{
+    display:block !important;
+    margin-top:8px;
+    color:#b88436;
+    font-family:var(--display);
+    font-size:clamp(8px,2.15vw,9.5px);
+    line-height:1;
+    letter-spacing:.23em;
+    white-space:nowrap;
+  }
+
+  .mobile-menu{
+    display:flex;
+    font-size:0;
+    gap:0;
+    margin-left:auto;
+  }
+  .mobile-menu i,
+  .mobile-menu i::before,
+  .mobile-menu i::after{
+    width:48px;
+    height:3px;
+  }
+  .mobile-menu i::before{top:-13px}
+  .mobile-menu i::after{top:13px}
+
+  /* Shorter, tighter mobile hero */
+  .hero-visual{
+    height:clamp(408px,106vw,480px);
+    min-height:408px;
+    aspect-ratio:auto;
+    overflow:hidden;
+    background:#061127;
+  }
+
+  .hero-picture{
+    display:block;
+    position:absolute;
+    inset:0;
+    z-index:1;
+  }
+  .hero-picture img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    /* move crop right + slightly lower so the woman is larger and more present */
+    object-position:66% 10%;
+    transform:scale(1.085);
+    transform-origin:66% 30%;
+  }
+  .hero-visual::after{
+    z-index:2;
+    background:
+      linear-gradient(180deg,rgba(5,13,31,.18) 0%,rgba(5,13,31,.03) 40%,rgba(5,13,31,.08) 100%),
+      linear-gradient(90deg,rgba(5,13,31,.18) 0%,rgba(5,13,31,.02) 62%,rgba(5,13,31,.05) 100%);
+  }
+
+  /* Headline: left side, lower, around woman's shoulder / upper-body height */
+  .hero-copy{
+    z-index:7;
+    left:7%;
+    right:auto;
+    top:18.5%;
+    width:57%;
+    max-width:246px;
+    transform:none;
+  }
+  .hero-copy::before{
+    inset:-6px -8px -6px -8px;
+    background:radial-gradient(ellipse at 35% 50%,rgba(5,12,27,.14),rgba(5,12,27,.03) 64%,transparent 84%);
+  }
+  .hero-copy h1{
+    font-size:clamp(28px,7.8vw,35px);
+    line-height:1.03;
+    letter-spacing:.002em;
+  }
+  .hero-line{
+    white-space:normal;
+  }
+  .gold-word{
+    font-size:1em;
+  }
+  .gold-word::after{
+    bottom:-.075em;
+    height:.065em;
+  }
+  .gold-word::before{
+    bottom:-.115em;
+    height:.03em;
+  }
+
+  /* Move the sprout and wave upward to shorten the visual rhythm */
+  .hero-gold-motif{
+    z-index:4;
+    left:-8%;
+    bottom:26.5%;
+    width:106%;
+    min-width:0;
+    max-width:none;
+    opacity:.9;
+    transform:none;
+    filter:contrast(1.08) brightness(1.02) saturate(.92) drop-shadow(0 0 6px rgba(245,215,115,.16));
+  }
+  .hero-green-wave{
+    z-index:6;
+    height:14.8%;
+    bottom:8.8%;
+  }
+  .spark-two{left:61%;top:39%}
+  .spark-three{left:11%;top:45%}
+
+  .services-section{
+    min-height:auto;
+    padding:18px 18px 80px;
+    margin-top:-1px;
+  }
+  .services-pink-sweep{
+    top:-62px;
+    right:-40%;
+    width:88%;
+    height:118px;
+  }
+  .services-copy{
+    margin-top:0;
+    max-width:338px;
+    position:relative;
+    z-index:4;
+  }
+  .tiny-star{
+    font-size:17px;
+    margin-bottom:5px;
+  }
+  .eyebrow{
+    font-size:13px;
+    letter-spacing:.32em;
+    margin-bottom:12px;
+  }
+  .intro{
+    max-width:338px;
+    font-size:clamp(19px,5.45vw,24px);
+    line-height:1.22;
+  }
+
+  .service-cards{
+    width:calc(100% - 24px);
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+    margin-top:-30px;
+  }
+  .service-card{
+    min-height:174px;
+    padding:40px 12px 18px;
+    border-radius:10px;
+  }
+}
+
+@media (max-width:430px) and (pointer:coarse){
+  .hero-visual{
+    height:438px;
+    min-height:438px;
+  }
+  .hero-picture img{
+    object-position:67% 11%;
+    transform:scale(1.11);
+    transform-origin:67% 31%;
+  }
+  .hero-copy{
+    top:18.6%;
+    left:7%;
+    width:58%;
+    max-width:238px;
+  }
+  .hero-copy h1{
+    font-size:clamp(27px,7.7vw,34px);
+  }
+  .hero-gold-motif{
+    left:-10%;
+    bottom:27.5%;
+    width:110%;
+  }
+  .hero-green-wave{
+    height:15%;
+    bottom:9.5%;
+  }
+  .services-section{
+    padding-top:17px;
+  }
+}
+
+@media (max-width:390px) and (pointer:coarse){
+  .site-header{
+    min-height:102px;
+    padding:0 18px;
+  }
+  .brand-mark{
+    width:56px;
+    height:56px;
+  }
+  .brand-text strong{
+    font-size:30px;
+  }
+  .brand-text small{
+    font-size:7.6px;
+    letter-spacing:.2em;
+    margin-top:7px;
+  }
+  .mobile-menu i,
+  .mobile-menu i::before,
+  .mobile-menu i::after{
+    width:44px;
+  }
+  .hero-visual{
+    height:426px;
+    min-height:426px;
+  }
+  .hero-picture img{
+    object-position:68% 12%;
+    transform:scale(1.12);
+  }
+  .hero-copy{
+    top:19%;
+    width:60%;
+    max-width:226px;
+  }
+  .hero-copy h1{
+    font-size:27px;
+  }
+  .hero-gold-motif{
+    left:-12%;
+    bottom:28%;
+    width:114%;
+  }
+  .hero-green-wave{
+    bottom:10%;
+  }
+  .intro{
+    font-size:20px;
+  }
+}
