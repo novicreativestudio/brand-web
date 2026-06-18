@@ -147,3 +147,10 @@ v33 final mobile refinement:
 - Lowered the headline so it starts around the woman's shoulder/upper-body height.
 - Raised the gold sprout motif and wave line.
 - Restored full mobile logo lockup: NOVI + CREATIVE STUDIO.
+
+
+v34 updates:
+- Balanced the mobile logo lockup (mark, NOVI, and CREATIVE STUDIO).
+- Shortened the mobile hero with stronger top/bottom crop.
+- Kept the woman visually larger while trimming hero height.
+- Pulled the sprout motif and green/gold wave upward for tighter mobile composition.
