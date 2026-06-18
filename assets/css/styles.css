@@ -3359,3 +3359,273 @@ button{font:inherit}
     top:-56px !important;
   }
 }
+
+
+/* v35h6 mobile refinement
+   - crop more from the navy space above the woman's head
+   - lower the 2-line copy closer to the shoulder line
+   - plant the sprout closer to the crest where the gold/green/pink waves meet
+   - keep Our Services visible by lowering the section content slightly
+*/
+@media (max-width:640px) and (pointer:coarse){
+  .hero-visual{
+    height:246px !important;
+    min-height:246px !important;
+  }
+  .hero-picture img{
+    object-position:63.2% 12.4% !important;
+    transform:scale(1.395) !important;
+    transform-origin:63.2% 12.8% !important;
+  }
+  .hero-copy{
+    top:25.6% !important;
+    left:5.7% !important;
+    width:57.2% !important;
+    max-width:223px !important;
+  }
+  .hero-copy h1{
+    font-size:21.3px !important;
+    line-height:1.0 !important;
+  }
+  .hero-gold-motif{
+    left:-4.9% !important;
+    bottom:2.6% !important;
+    width:109.2% !important;
+  }
+  .hero-green-wave{
+    height:12.8% !important;
+    bottom:-9px !important;
+    z-index:10 !important;
+  }
+  .services-section{
+    margin-top:-3px !important;
+    padding-top:16px !important;
+  }
+  .services-copy{
+    margin-top:16px !important;
+  }
+  .services-pink-sweep{
+    top:-54px !important;
+  }
+}
+
+@media (max-width:430px) and (pointer:coarse){
+  .hero-visual{
+    height:224px !important;
+    min-height:224px !important;
+  }
+  .hero-picture img{
+    object-position:63.5% 11.6% !important;
+    transform:scale(1.435) !important;
+    transform-origin:63.5% 12.1% !important;
+  }
+  .hero-copy{
+    top:28.2% !important;
+    left:5.1% !important;
+    width:56.8% !important;
+    max-width:211px !important;
+  }
+  .hero-copy h1{
+    font-size:20.1px !important;
+    line-height:1.0 !important;
+  }
+  .hero-gold-motif{
+    left:-4.9% !important;
+    bottom:1.7% !important;
+    width:110.4% !important;
+  }
+  .hero-green-wave{
+    height:13.3% !important;
+    bottom:-10px !important;
+    z-index:10 !important;
+  }
+  .services-section{
+    margin-top:-1px !important;
+    padding-top:18px !important;
+  }
+  .services-copy{
+    margin-top:18px !important;
+  }
+  .services-pink-sweep{
+    top:-50px !important;
+    width:54% !important;
+  }
+}
+
+@media (max-width:390px) and (pointer:coarse){
+  .hero-visual{
+    height:216px !important;
+    min-height:216px !important;
+  }
+  .hero-picture img{
+    object-position:63.8% 11.1% !important;
+    transform:scale(1.46) !important;
+    transform-origin:63.8% 11.7% !important;
+  }
+  .hero-copy{
+    top:28.9% !important;
+    left:4.8% !important;
+    width:56.2% !important;
+    max-width:204px !important;
+  }
+  .hero-copy h1{
+    font-size:19.4px !important;
+    line-height:1.0 !important;
+  }
+  .hero-gold-motif{
+    left:-5.1% !important;
+    bottom:1.3% !important;
+    width:111% !important;
+  }
+  .hero-green-wave{
+    height:13.6% !important;
+    bottom:-11px !important;
+    z-index:10 !important;
+  }
+  .services-section{
+    margin-top:0 !important;
+    padding-top:19px !important;
+  }
+  .services-copy{
+    margin-top:19px !important;
+  }
+  .services-pink-sweep{
+    top:-47px !important;
+    width:55% !important;
+  }
+}
+
+
+/* v35h7 mobile refinement
+   - crop more from the navy space above the woman's head
+   - lower hero copy about 1cm visually on phone
+   - sink the sprout/light wave so it grows out of the green-pink wave crest
+*/
+@media (max-width:640px) and (pointer:coarse){
+  .hero-visual{
+    height:236px !important;
+    min-height:236px !important;
+  }
+  .hero-picture img{
+    object-position:63.1% 9.6% !important;
+    transform:scale(1.43) !important;
+    transform-origin:63.1% 10.1% !important;
+  }
+  .hero-copy{
+    top:33.5% !important;
+    left:5.6% !important;
+    width:56.8% !important;
+    max-width:220px !important;
+  }
+  .hero-copy h1{
+    font-size:20.9px !important;
+    line-height:1.0 !important;
+  }
+  .hero-gold-motif{
+    left:-5.5% !important;
+    bottom:-1.8% !important;
+    width:110.6% !important;
+  }
+  .hero-green-wave{
+    height:13.4% !important;
+    bottom:-10px !important;
+    z-index:10 !important;
+  }
+  .services-section{
+    margin-top:-2px !important;
+    padding-top:18px !important;
+  }
+  .services-copy{
+    margin-top:18px !important;
+  }
+  .services-pink-sweep{
+    top:-51px !important;
+    width:54.5% !important;
+  }
+}
+
+@media (max-width:430px) and (pointer:coarse){
+  .hero-visual{
+    height:210px !important;
+    min-height:210px !important;
+  }
+  .hero-picture img{
+    object-position:63.4% 8.4% !important;
+    transform:scale(1.475) !important;
+    transform-origin:63.4% 9.0% !important;
+  }
+  .hero-copy{
+    top:36.8% !important;
+    left:4.9% !important;
+    width:56.2% !important;
+    max-width:206px !important;
+  }
+  .hero-copy h1{
+    font-size:19.6px !important;
+    line-height:1.0 !important;
+  }
+  .hero-gold-motif{
+    left:-5.8% !important;
+    bottom:-3.3% !important;
+    width:111.8% !important;
+  }
+  .hero-green-wave{
+    height:13.9% !important;
+    bottom:-11px !important;
+    z-index:10 !important;
+  }
+  .services-section{
+    margin-top:-2px !important;
+    padding-top:20px !important;
+  }
+  .services-copy{
+    margin-top:20px !important;
+  }
+  .services-pink-sweep{
+    top:-46px !important;
+    width:55% !important;
+  }
+}
+
+@media (max-width:390px) and (pointer:coarse){
+  .hero-visual{
+    height:202px !important;
+    min-height:202px !important;
+  }
+  .hero-picture img{
+    object-position:63.7% 7.8% !important;
+    transform:scale(1.495) !important;
+    transform-origin:63.7% 8.5% !important;
+  }
+  .hero-copy{
+    top:38.4% !important;
+    left:4.7% !important;
+    width:55.8% !important;
+    max-width:198px !important;
+  }
+  .hero-copy h1{
+    font-size:18.9px !important;
+    line-height:1.0 !important;
+  }
+  .hero-gold-motif{
+    left:-6% !important;
+    bottom:-4.1% !important;
+    width:112.6% !important;
+  }
+  .hero-green-wave{
+    height:14.2% !important;
+    bottom:-12px !important;
+    z-index:10 !important;
+  }
+  .services-section{
+    margin-top:-1px !important;
+    padding-top:20px !important;
+  }
+  .services-copy{
+    margin-top:20px !important;
+  }
+  .services-pink-sweep{
+    top:-44px !important;
+    width:56% !important;
+  }
+}
