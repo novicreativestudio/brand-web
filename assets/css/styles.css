@@ -2302,3 +2302,39 @@ button{font:inherit}
   .hero-copy h1{font-size:29px}
   .hero-gold-motif{bottom:22.2%}
 }
+
+
+/* v35e final mobile tuning + cache refresh */
+@media (max-width:640px) and (pointer:coarse){
+  .brand{gap:14px !important;}
+  .brand-text{min-width:176px !important; align-items:flex-start !important;}
+  .brand-text strong{transform:none !important;}
+  .brand-text small{display:block !important; width:100% !important; text-align:center !important; margin-top:5px !important; margin-left:0 !important; padding-left:0 !important; transform:translateX(-.12em) !important; letter-spacing:.125em !important;}
+  .hero-visual{height:470px !important; min-height:470px !important;}
+  .hero-picture img{object-position:54% 14% !important; transform:scale(1.12) !important; transform-origin:54% 18% !important;}
+  .hero-copy{top:15.5% !important; left:7% !important; width:44% !important; max-width:172px !important;}
+  .hero-copy h1{font-size:clamp(31px,7.5vw,39px) !important; line-height:1.02 !important;}
+  .hero-gold-motif{left:-7% !important; bottom:15.2% !important; width:103% !important; opacity:.93 !important;}
+  .hero-green-wave{height:11.2% !important; bottom:0 !important;}
+}
+@media (max-width:430px) and (pointer:coarse){
+  .brand-text strong{font-size:27px !important; letter-spacing:.14em !important;}
+  .brand-text small{font-size:7.2px !important; transform:translateX(-.16em) !important; letter-spacing:.12em !important;}
+  .hero-visual{height:452px !important; min-height:452px !important;}
+  .hero-picture img{object-position:54.5% 14% !important; transform:scale(1.125) !important; transform-origin:54% 18% !important;}
+  .hero-copy{top:15.2% !important; left:7% !important; width:44% !important; max-width:168px !important;}
+  .hero-copy h1{font-size:clamp(29px,7.6vw,37px) !important; line-height:1.015 !important;}
+  .hero-gold-motif{left:-7.5% !important; bottom:14.2% !important; width:104% !important;}
+  .hero-green-wave{height:10.8% !important;}
+}
+@media (max-width:390px) and (pointer:coarse){
+  .brand-text{min-width:166px !important;}
+  .brand-text strong{font-size:25px !important; letter-spacing:.135em !important;}
+  .brand-text small{font-size:6.8px !important; transform:translateX(-.17em) !important; letter-spacing:.115em !important;}
+  .hero-visual{height:438px !important; min-height:438px !important;}
+  .hero-picture img{object-position:55% 14% !important; transform:scale(1.13) !important;}
+  .hero-copy{top:15% !important; max-width:160px !important;}
+  .hero-copy h1{font-size:28px !important;}
+  .hero-gold-motif{bottom:13.8% !important; width:105% !important;}
+  .hero-green-wave{height:10.4% !important;}
+}

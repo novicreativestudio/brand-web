@@ -154,3 +154,8 @@ v34 updates:
 - Shortened the mobile hero with stronger top/bottom crop.
 - Kept the woman visually larger while trimming hero height.
 - Pulled the sprout motif and green/gold wave upward for tighter mobile composition.
+
+v35e notes:
+- Mobile logo subtext re-centered under NOVI.
+- Mobile hero shortened by trimming lower navy area while keeping the upper crop stable.
+- Cache-busting query strings added to CSS, JS, favicon, and hero/image assets.
