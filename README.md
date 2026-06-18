@@ -123,3 +123,8 @@ v29 desktop zoom stability:
 - Gated all max-width responsive breakpoints with pointer:coarse so desktop browser zoom does not trigger mobile/tablet layout changes.
 - Real touch mobile/tablet devices still receive the responsive layout.
 - Added fine-pointer desktop rules to preserve the approved FV composition for the woman image, sprout, heading, and menu during Chrome zoom changes.
+
+v30 mobile correction:
+- Based on v29.
+- Added final iPhone/mobile overrides so the pink ribbon, header, hero text, woman image, sprout, wave, services intro, and service cards have a dedicated vertical mobile layout.
+- Desktop zoom-stability rules remain for pointer:fine devices.
