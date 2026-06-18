@@ -3629,3 +3629,143 @@ button{font:inherit}
     width:56% !important;
   }
 }
+
+
+/* v35h8 mobile correction
+   Requested fix:
+   - crop the NAVY space above the woman's head (not the whole composition incorrectly)
+   - lower the 2-line hero copy toward the sparkle line / shoulder level
+   - let the gold sprout/light line overlap the green + pink waves more clearly
+   - keep desktop unchanged
+*/
+@media (max-width:640px) and (pointer:coarse){
+  .hero-visual{
+    height:236px !important;
+    min-height:236px !important;
+    overflow:hidden !important;
+  }
+  .hero-picture img{
+    /* crop more from above the woman's head */
+    object-position:63.3% 12.2% !important;
+    transform:scale(1.465) !important;
+    transform-origin:63.3% 12.8% !important;
+  }
+  .hero-copy{
+    /* lower the 2-line copy closer to the sparkle line */
+    top:40.5% !important;
+    left:5.4% !important;
+    width:57.5% !important;
+    max-width:224px !important;
+  }
+  .hero-copy h1{
+    font-size:20.8px !important;
+    line-height:1.0 !important;
+  }
+  .hero-gold-motif{
+    /* let the sprout grow out of the wave boundary */
+    left:-5.2% !important;
+    bottom:-5.2% !important;
+    width:111.6% !important;
+  }
+  .hero-green-wave{
+    height:14.2% !important;
+    bottom:-12px !important;
+    z-index:10 !important;
+  }
+  .services-section{
+    margin-top:-3px !important;
+    padding-top:24px !important;
+  }
+  .services-copy{
+    margin-top:22px !important;
+  }
+  .services-pink-sweep{
+    top:-52px !important;
+    width:55% !important;
+  }
+}
+
+@media (max-width:430px) and (pointer:coarse){
+  .hero-visual{
+    height:212px !important;
+    min-height:212px !important;
+  }
+  .hero-picture img{
+    object-position:63.6% 12.4% !important;
+    transform:scale(1.505) !important;
+    transform-origin:63.6% 13.0% !important;
+  }
+  .hero-copy{
+    top:43.5% !important;
+    left:4.9% !important;
+    width:56.8% !important;
+    max-width:208px !important;
+  }
+  .hero-copy h1{
+    font-size:19.8px !important;
+    line-height:1.0 !important;
+  }
+  .hero-gold-motif{
+    left:-5.4% !important;
+    bottom:-6.2% !important;
+    width:112.8% !important;
+  }
+  .hero-green-wave{
+    height:14.8% !important;
+    bottom:-13px !important;
+    z-index:10 !important;
+  }
+  .services-section{
+    margin-top:-2px !important;
+    padding-top:24px !important;
+  }
+  .services-copy{
+    margin-top:24px !important;
+  }
+  .services-pink-sweep{
+    top:-48px !important;
+    width:56% !important;
+  }
+}
+
+@media (max-width:390px) and (pointer:coarse){
+  .hero-visual{
+    height:204px !important;
+    min-height:204px !important;
+  }
+  .hero-picture img{
+    object-position:63.9% 12.7% !important;
+    transform:scale(1.525) !important;
+    transform-origin:63.9% 13.2% !important;
+  }
+  .hero-copy{
+    top:44.4% !important;
+    left:4.7% !important;
+    width:56.4% !important;
+    max-width:200px !important;
+  }
+  .hero-copy h1{
+    font-size:19px !important;
+    line-height:1.0 !important;
+  }
+  .hero-gold-motif{
+    left:-5.6% !important;
+    bottom:-6.8% !important;
+    width:113.4% !important;
+  }
+  .hero-green-wave{
+    height:15.1% !important;
+    bottom:-14px !important;
+    z-index:10 !important;
+  }
+  .services-section{
+    padding-top:24px !important;
+  }
+  .services-copy{
+    margin-top:24px !important;
+  }
+  .services-pink-sweep{
+    top:-46px !important;
+    width:57% !important;
+  }
+}
