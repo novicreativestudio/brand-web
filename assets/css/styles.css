@@ -3226,3 +3226,136 @@ button{font:inherit}
     top:-80px !important;
   }
 }
+
+
+/* v35h5 mobile refinement
+   - crop more from above the woman's head
+   - lower the 2-line copy closer to the shoulder line
+   - reveal the Our Services title more clearly
+   - rebalance gold / green / pink wave overlap
+*/
+@media (max-width:640px) and (pointer:coarse){
+  .hero-visual{
+    height:252px !important;
+    min-height:252px !important;
+  }
+  .hero-picture img{
+    object-position:63.1% 13.8% !important;
+    transform:scale(1.372) !important;
+    transform-origin:63.1% 14.2% !important;
+  }
+  .hero-copy{
+    top:22.3% !important;
+    left:5.6% !important;
+    width:57.6% !important;
+    max-width:224px !important;
+  }
+  .hero-copy h1{
+    font-size:21.5px !important;
+    line-height:1.0 !important;
+  }
+  .hero-gold-motif{
+    left:-5.1% !important;
+    bottom:6.8% !important;
+    width:108.5% !important;
+  }
+  .hero-green-wave{
+    height:12.4% !important;
+    bottom:-7px !important;
+    z-index:10 !important;
+  }
+  .services-section{
+    margin-top:-8px !important;
+    padding-top:10px !important;
+  }
+  .services-copy{
+    margin-top:8px !important;
+  }
+  .services-pink-sweep{
+    top:-60px !important;
+  }
+}
+
+@media (max-width:430px) and (pointer:coarse){
+  .hero-visual{
+    height:232px !important;
+    min-height:232px !important;
+  }
+  .hero-picture img{
+    object-position:63.4% 13.3% !important;
+    transform:scale(1.415) !important;
+    transform-origin:63.4% 13.8% !important;
+  }
+  .hero-copy{
+    top:23.2% !important;
+    left:5.1% !important;
+    width:57.2% !important;
+    max-width:213px !important;
+  }
+  .hero-copy h1{
+    font-size:20.6px !important;
+    line-height:1.0 !important;
+  }
+  .hero-gold-motif{
+    left:-5.5% !important;
+    bottom:6.1% !important;
+    width:109.4% !important;
+  }
+  .hero-green-wave{
+    height:12.9% !important;
+    bottom:-8px !important;
+    z-index:10 !important;
+  }
+  .services-section{
+    margin-top:-4px !important;
+    padding-top:12px !important;
+  }
+  .services-copy{
+    margin-top:12px !important;
+  }
+  .services-pink-sweep{
+    top:-58px !important;
+  }
+}
+
+@media (max-width:390px) and (pointer:coarse){
+  .hero-visual{
+    height:224px !important;
+    min-height:224px !important;
+  }
+  .hero-picture img{
+    object-position:63.8% 13.1% !important;
+    transform:scale(1.44) !important;
+    transform-origin:63.8% 13.6% !important;
+  }
+  .hero-copy{
+    top:23.7% !important;
+    left:4.9% !important;
+    width:56.7% !important;
+    max-width:206px !important;
+  }
+  .hero-copy h1{
+    font-size:19.8px !important;
+    line-height:1.0 !important;
+  }
+  .hero-gold-motif{
+    left:-5.8% !important;
+    bottom:5.6% !important;
+    width:110% !important;
+  }
+  .hero-green-wave{
+    height:13.1% !important;
+    bottom:-9px !important;
+    z-index:10 !important;
+  }
+  .services-section{
+    margin-top:-2px !important;
+    padding-top:13px !important;
+  }
+  .services-copy{
+    margin-top:13px !important;
+  }
+  .services-pink-sweep{
+    top:-56px !important;
+  }
+}
