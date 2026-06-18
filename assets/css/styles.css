@@ -2925,3 +2925,148 @@ button{font:inherit}
     padding-top:8px !important;
   }
 }
+
+
+/* v35h3 mobile refinement
+   - improve mobile hero balance further
+   - restore visible gold wave at hero/services boundary
+   - shorten FV slightly more while preserving subject scale
+*/
+@media (max-width:640px) and (pointer:coarse){
+  .hero-visual{
+    height:282px !important;
+    min-height:282px !important;
+  }
+
+  .hero-picture img{
+    object-position:62.4% 14.4% !important;
+    transform:scale(1.315) !important;
+    transform-origin:62.4% 15% !important;
+  }
+
+  .hero-copy{
+    top:11.6% !important;
+    left:5.6% !important;
+    width:60.5% !important;
+    max-width:236px !important;
+  }
+
+  .hero-copy h1{
+    font-size:23px !important;
+    line-height:1.03 !important;
+  }
+
+  .hero-gold-motif{
+    left:-4.8% !important;
+    bottom:11.2% !important;
+    width:106% !important;
+  }
+
+  .hero-green-wave{
+    height:9.8% !important;
+    bottom:-2px !important;
+  }
+
+  .services-section{
+    margin-top:-16px !important;
+    padding-top:8px !important;
+  }
+
+  .services-copy{
+    margin-top:-6px !important;
+  }
+
+  .services-pink-sweep{
+    top:-62px !important;
+  }
+}
+
+@media (max-width:430px) and (pointer:coarse){
+  .hero-visual{
+    height:268px !important;
+    min-height:268px !important;
+  }
+
+  .hero-picture img{
+    object-position:62.7% 14.1% !important;
+    transform:scale(1.338) !important;
+    transform-origin:62.7% 14.8% !important;
+  }
+
+  .hero-copy{
+    top:11.2% !important;
+    left:5.5% !important;
+    width:60.8% !important;
+    max-width:228px !important;
+  }
+
+  .hero-copy h1{
+    font-size:22px !important;
+    line-height:1.02 !important;
+  }
+
+  .hero-gold-motif{
+    left:-5% !important;
+    bottom:10.8% !important;
+    width:106.5% !important;
+  }
+
+  .hero-green-wave{
+    height:9.3% !important;
+    bottom:-2px !important;
+  }
+
+  .services-section{
+    margin-top:-18px !important;
+    padding-top:7px !important;
+  }
+
+  .services-pink-sweep{
+    top:-60px !important;
+  }
+}
+
+@media (max-width:390px) and (pointer:coarse){
+  .hero-visual{
+    height:258px !important;
+    min-height:258px !important;
+  }
+
+  .hero-picture img{
+    object-position:63.1% 14% !important;
+    transform:scale(1.35) !important;
+    transform-origin:63.1% 14.7% !important;
+  }
+
+  .hero-copy{
+    top:10.8% !important;
+    left:5.2% !important;
+    width:61.2% !important;
+    max-width:220px !important;
+  }
+
+  .hero-copy h1{
+    font-size:21px !important;
+    line-height:1.01 !important;
+  }
+
+  .hero-gold-motif{
+    left:-5.2% !important;
+    bottom:10.4% !important;
+    width:107% !important;
+  }
+
+  .hero-green-wave{
+    height:8.9% !important;
+    bottom:-2px !important;
+  }
+
+  .services-section{
+    margin-top:-20px !important;
+    padding-top:6px !important;
+  }
+
+  .services-copy{
+    margin-top:-8px !important;
+  }
+}
