@@ -159,3 +159,15 @@ v35e notes:
 - Mobile logo subtext re-centered under NOVI.
 - Mobile hero shortened by trimming lower navy area while keeping the upper crop stable.
 - Cache-busting query strings added to CSS, JS, favicon, and hero/image assets.
+
+
+v35f corrections:
+- Shortened the mobile hero again by trimming the lower navy area instead of increasing total FV height.
+- Re-centered CREATIVE STUDIO visually under NOVI using a grid-based mobile logo lockup.
+- Refreshed cache-busting version strings to v35f1.
+
+v35g final correction:
+- CREATIVE STUDIO is visually centered under NOVI with a fixed mobile logo lockup width.
+- Upper navy crop is kept stable.
+- Lower navy / overall mobile FV height is shortened again.
+- Cache-busting strings updated to v35g1.
