@@ -1989,3 +1989,316 @@ button{font:inherit}
     bottom:2.7%;
   }
 }
+
+
+/* v35 final mobile logo alignment + tighter FV crop */
+@media (max-width:640px) and (pointer:coarse){
+  .brand-text{
+    align-items:flex-start !important;
+  }
+  .brand-text strong{
+    transform:translateX(.02em) !important;
+  }
+  .brand-text small{
+    width:100% !important;
+    text-align:center !important;
+    transform:translateX(.22em) !important;
+    letter-spacing:.16em !important;
+  }
+
+  .hero-visual{
+    height:344px !important;
+    min-height:344px !important;
+  }
+  .hero-picture img{
+    object-position:71% 10% !important;
+    transform:scale(1.22) !important;
+    transform-origin:71% 20% !important;
+  }
+  .hero-copy{
+    top:15.5% !important;
+  }
+  .hero-gold-motif{
+    bottom:16.5% !important;
+  }
+  .hero-green-wave{
+    bottom:2.2% !important;
+    height:12.2% !important;
+  }
+}
+
+@media (max-width:430px) and (pointer:coarse){
+  .brand-text strong{
+    font-size:27px !important;
+    letter-spacing:.15em !important;
+  }
+  .brand-text small{
+    font-size:7.4px !important;
+    margin-top:4px !important;
+    transform:translateX(.26em) !important;
+  }
+  .hero-visual{
+    height:336px !important;
+    min-height:336px !important;
+  }
+  .hero-picture img{
+    object-position:72% 9% !important;
+    transform:scale(1.24) !important;
+    transform-origin:72% 19% !important;
+  }
+  .hero-copy{
+    top:15% !important;
+    width:56% !important;
+    max-width:210px !important;
+  }
+  .hero-copy h1{
+    font-size:24px !important;
+    line-height:1.02 !important;
+  }
+  .hero-gold-motif{
+    bottom:16.8% !important;
+    width:108% !important;
+    left:-8% !important;
+  }
+  .hero-green-wave{
+    height:12% !important;
+    bottom:2% !important;
+  }
+}
+
+@media (max-width:390px) and (pointer:coarse){
+  .brand-text strong{
+    font-size:26px !important;
+    letter-spacing:.14em !important;
+  }
+  .brand-text small{
+    font-size:7px !important;
+    transform:translateX(.28em) !important;
+  }
+  .hero-visual{
+    height:330px !important;
+    min-height:330px !important;
+  }
+  .hero-picture img{
+    object-position:72% 8% !important;
+    transform:scale(1.25) !important;
+  }
+  .hero-gold-motif{
+    bottom:17% !important;
+  }
+}
+
+
+/* v35c mobile logo balance + shorter hero crop */
+@media (max-width:640px) and (pointer:coarse){
+  .brand-text{
+    min-width:168px !important;
+    align-items:flex-start !important;
+  }
+  .brand-text strong{
+    transform:none !important;
+  }
+  .brand-text small{
+    width:100% !important;
+    text-align:center !important;
+    padding-left:20px !important;
+    transform:none !important;
+    margin-top:4px !important;
+    letter-spacing:.14em !important;
+  }
+
+  .hero-visual{
+    height:318px !important;
+    min-height:318px !important;
+  }
+  .hero-picture img{
+    object-position:72% 18% !important;
+    transform:scale(1.29) !important;
+    transform-origin:72% 23% !important;
+  }
+  .hero-copy{
+    top:13.2% !important;
+    left:7.2% !important;
+    width:50% !important;
+    max-width:194px !important;
+  }
+  .hero-copy h1{
+    line-height:1.01 !important;
+  }
+  .hero-gold-motif{
+    bottom:14.4% !important;
+    left:-5% !important;
+    width:108% !important;
+  }
+  .hero-green-wave{
+    height:15.2% !important;
+    bottom:0 !important;
+  }
+}
+
+@media (max-width:430px) and (pointer:coarse){
+  .brand-text strong{
+    font-size:26px !important;
+    letter-spacing:.145em !important;
+  }
+  .brand-text small{
+    font-size:7.2px !important;
+    padding-left:23px !important;
+    margin-top:3px !important;
+  }
+  .hero-visual{
+    height:302px !important;
+    min-height:302px !important;
+  }
+  .hero-picture img{
+    object-position:73% 20% !important;
+    transform:scale(1.32) !important;
+    transform-origin:73% 24% !important;
+  }
+  .hero-copy{
+    top:12.7% !important;
+    left:7% !important;
+    width:49% !important;
+    max-width:182px !important;
+  }
+  .hero-copy h1{
+    font-size:22px !important;
+    line-height:1.01 !important;
+  }
+  .hero-gold-motif{
+    bottom:14.7% !important;
+    left:-6% !important;
+    width:110% !important;
+  }
+  .hero-green-wave{
+    height:15.8% !important;
+    bottom:0 !important;
+  }
+}
+
+@media (max-width:390px) and (pointer:coarse){
+  .brand-text{
+    min-width:160px !important;
+  }
+  .brand-text strong{
+    font-size:24px !important;
+    letter-spacing:.14em !important;
+  }
+  .brand-text small{
+    display:block !important;
+    font-size:6.7px !important;
+    padding-left:22px !important;
+    letter-spacing:.12em !important;
+  }
+  .hero-visual{
+    height:292px !important;
+    min-height:292px !important;
+  }
+  .hero-picture img{
+    object-position:73% 21% !important;
+    transform:scale(1.34) !important;
+    transform-origin:73% 25% !important;
+  }
+  .hero-copy{
+    top:12.2% !important;
+    max-width:170px !important;
+  }
+  .hero-copy h1{
+    font-size:21px !important;
+  }
+  .hero-gold-motif{
+    bottom:15% !important;
+  }
+  .hero-green-wave{
+    height:16.2% !important;
+  }
+}
+
+/* v35d mobile refinement overrides */
+@media (max-width:620px) and (pointer:coarse){
+  .brand-text strong{transform:translateX(.02em)}
+  .brand-text small{
+    margin-top:6px;
+    margin-left:16px;
+    transform:none;
+    letter-spacing:.12em;
+    text-align:center;
+  }
+}
+
+@media (max-width:430px) and (pointer:coarse){
+  .brand-text small{
+    margin-left:14px;
+    font-size:7.6px;
+    letter-spacing:.105em;
+  }
+}
+
+@media (max-width:640px) and (pointer:coarse){
+  .hero-visual{
+    height:clamp(500px,112vw,575px);
+    min-height:500px;
+  }
+  .hero-picture img{
+    object-position:53% 14%;
+    transform:scale(1.09);
+    animation:none;
+    opacity:1;
+  }
+  .hero-copy{
+    top:16%;
+    left:7%;
+    right:7%;
+  }
+  .hero-copy h1{
+    font-size:clamp(31px,7.8vw,42px);
+  }
+  .hero-gold-motif{
+    left:-17%;
+    bottom:20.8%;
+    width:112%;
+    opacity:.92;
+  }
+  .hero-green-wave{
+    height:13.5%;
+    bottom:-1px;
+  }
+}
+
+@media (max-width:430px) and (pointer:coarse){
+  .hero-visual{
+    height:520px;
+    min-height:520px;
+  }
+  .hero-picture img{
+    object-position:54% 13%;
+    transform:scale(1.1);
+  }
+  .hero-copy{
+    top:15%;
+    left:7%;
+    right:7%;
+  }
+  .hero-copy h1{
+    font-size:clamp(30px,7.6vw,40px);
+  }
+  .hero-gold-motif{
+    left:-19%;
+    bottom:21.5%;
+    width:116%;
+  }
+  .hero-green-wave{height:14%}
+}
+
+@media (max-width:390px) and (pointer:coarse){
+  .hero-visual{
+    height:500px;
+    min-height:500px;
+  }
+  .hero-picture img{
+    object-position:54% 12%;
+    transform:scale(1.11);
+  }
+  .hero-copy h1{font-size:29px}
+  .hero-gold-motif{bottom:22.2%}
+}
