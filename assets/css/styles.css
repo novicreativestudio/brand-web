@@ -2794,3 +2794,134 @@ button{font:inherit}
     height:8.1% !important;
   }
 }
+
+
+/* v35h2 mobile-only refinement
+   Scope requested by user:
+   - revert to v35h base / keep desktop unchanged
+   - mobile only: shorten FV further by trimming upper/lower navy areas
+   - especially reduce the lower navy area
+   - raise the following green services segment overall
+*/
+@media (max-width:640px) and (pointer:coarse){
+  .hero-visual{
+    height:292px !important;
+    min-height:292px !important;
+    overflow:hidden !important;
+  }
+
+  .hero-picture img{
+    object-position:61.5% 15.2% !important;
+    transform:scale(1.285) !important;
+    transform-origin:61.5% 16% !important;
+  }
+
+  .hero-copy{
+    top:12.4% !important;
+    left:6% !important;
+    width:61.5% !important;
+    max-width:242px !important;
+  }
+
+  .hero-copy h1{
+    font-size:24px !important;
+    line-height:1.02 !important;
+  }
+
+  .hero-gold-motif{
+    left:-5% !important;
+    bottom:8.4% !important;
+    width:104% !important;
+  }
+
+  .hero-green-wave{
+    height:7.4% !important;
+    bottom:-1px !important;
+  }
+
+  .services-section{
+    margin-top:-10px !important;
+    padding-top:10px !important;
+  }
+
+  .services-copy{
+    margin-top:-2px !important;
+  }
+
+  .services-pink-sweep{
+    top:-52px !important;
+  }
+}
+
+@media (max-width:430px) and (pointer:coarse){
+  .hero-visual{
+    height:280px !important;
+    min-height:280px !important;
+  }
+
+  .hero-picture img{
+    object-position:62% 15% !important;
+    transform:scale(1.305) !important;
+    transform-origin:62% 16% !important;
+  }
+
+  .hero-copy{
+    top:12.2% !important;
+    width:62.5% !important;
+    max-width:232px !important;
+  }
+
+  .hero-copy h1{
+    font-size:23px !important;
+  }
+
+  .hero-gold-motif{
+    bottom:8% !important;
+    width:105% !important;
+  }
+
+  .hero-green-wave{
+    height:7% !important;
+  }
+
+  .services-section{
+    margin-top:-12px !important;
+    padding-top:8px !important;
+  }
+}
+
+@media (max-width:390px) and (pointer:coarse){
+  .hero-visual{
+    height:268px !important;
+    min-height:268px !important;
+  }
+
+  .hero-picture img{
+    object-position:62.4% 15% !important;
+    transform:scale(1.325) !important;
+    transform-origin:62.4% 16% !important;
+  }
+
+  .hero-copy{
+    top:12% !important;
+    width:63% !important;
+    max-width:222px !important;
+  }
+
+  .hero-copy h1{
+    font-size:21px !important;
+  }
+
+  .hero-gold-motif{
+    bottom:7.8% !important;
+  }
+
+  .hero-green-wave{
+    height:6.8% !important;
+  }
+
+  .services-section{
+    margin-top:-14px !important;
+    padding-top:8px !important;
+  }
+}
