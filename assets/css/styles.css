@@ -3070,3 +3070,159 @@ button{font:inherit}
     margin-top:-8px !important;
   }
 }
+
+
+/* v35h4 mobile refinement
+   - move 2-line FV copy lower toward the woman's shoulder line
+   - shorten FV further by cropping top and bottom
+   - let the gold wave overlap the green and pink section more clearly
+*/
+@media (max-width:640px) and (pointer:coarse){
+  .hero-visual{
+    height:264px !important;
+    min-height:264px !important;
+  }
+
+  .hero-picture img{
+    object-position:63% 15.6% !important;
+    transform:scale(1.355) !important;
+    transform-origin:63% 16% !important;
+  }
+
+  .hero-copy{
+    top:18.2% !important;
+    left:5.6% !important;
+    width:58.5% !important;
+    max-width:226px !important;
+  }
+
+  .hero-copy h1{
+    font-size:22px !important;
+    line-height:1.02 !important;
+  }
+
+  .hero-gold-motif{
+    left:-4.4% !important;
+    bottom:9.5% !important;
+    width:106% !important;
+  }
+
+  .hero-green-wave{
+    height:11.2% !important;
+    bottom:-10px !important;
+    z-index:10 !important;
+  }
+
+  .services-section{
+    margin-top:-28px !important;
+    padding-top:2px !important;
+  }
+
+  .services-copy{
+    margin-top:-16px !important;
+  }
+
+  .services-pink-sweep{
+    top:-74px !important;
+  }
+}
+
+@media (max-width:430px) and (pointer:coarse){
+  .hero-visual{
+    height:246px !important;
+    min-height:246px !important;
+  }
+
+  .hero-picture img{
+    object-position:63.3% 15.6% !important;
+    transform:scale(1.385) !important;
+    transform-origin:63.3% 16% !important;
+  }
+
+  .hero-copy{
+    top:18.8% !important;
+    left:5.3% !important;
+    width:58% !important;
+    max-width:215px !important;
+  }
+
+  .hero-copy h1{
+    font-size:21px !important;
+    line-height:1.01 !important;
+  }
+
+  .hero-gold-motif{
+    left:-4.8% !important;
+    bottom:8.8% !important;
+    width:107% !important;
+  }
+
+  .hero-green-wave{
+    height:10.8% !important;
+    bottom:-12px !important;
+    z-index:10 !important;
+  }
+
+  .services-section{
+    margin-top:-32px !important;
+    padding-top:0 !important;
+  }
+
+  .services-copy{
+    margin-top:-18px !important;
+  }
+
+  .services-pink-sweep{
+    top:-78px !important;
+  }
+}
+
+@media (max-width:390px) and (pointer:coarse){
+  .hero-visual{
+    height:236px !important;
+    min-height:236px !important;
+  }
+
+  .hero-picture img{
+    object-position:63.8% 15.8% !important;
+    transform:scale(1.405) !important;
+    transform-origin:63.8% 16.2% !important;
+  }
+
+  .hero-copy{
+    top:19.4% !important;
+    left:5.1% !important;
+    width:57.5% !important;
+    max-width:208px !important;
+  }
+
+  .hero-copy h1{
+    font-size:20px !important;
+    line-height:1.0 !important;
+  }
+
+  .hero-gold-motif{
+    left:-5.1% !important;
+    bottom:8.2% !important;
+    width:108% !important;
+  }
+
+  .hero-green-wave{
+    height:10.4% !important;
+    bottom:-13px !important;
+    z-index:10 !important;
+  }
+
+  .services-section{
+    margin-top:-34px !important;
+    padding-top:0 !important;
+  }
+
+  .services-copy{
+    margin-top:-20px !important;
+  }
+
+  .services-pink-sweep{
+    top:-80px !important;
+  }
+}
