@@ -277,3 +277,24 @@ webp31 mobile card-gap fix:
 - Kept: mobile no-sprout design, pink Our Services label, sparkle treatment, menu fix, desktop layout.
 - Adjusted only mobile vertical spacing: raised service cards from the too-low webp30 position while preserving space below the intro.
 - Cache-busting updated to webp31.
+
+webp32 production clean:
+- Cleaned and integrated mobile CSS instead of stacking webp7-webp31 override blocks.
+- Removed historical mobile/sprout/card override blocks from styles.css.
+- Removed unused mobile spark-four / spark-five HTML spans.
+- Kept approved desktop design.
+- Kept mobile menu fix.
+- Final mobile: no separate sprout motif, pink Our Services label, top/bottom gold line + sparkle sets, approved card spacing.
+- Cache-busting updated to webp32.
+
+webp33 production clean line fix:
+- Based on webp32 production clean.
+- Fixed the top Our Services gold line set: removed the thick rectangular background blocks and replaced them with thin pseudo-element lines around the central sparkle.
+- No layout, menu, card, or desktop changes.
+- Cache-busting updated to webp33.
+
+webp34 gold drop only fix:
+- Based on webp33 production clean line fix.
+- Fixed only the gold drop on the pink ribbon.
+- No changes to hero, Our Services, cards, menu, or desktop layout.
+- Cache-busting updated to webp34.

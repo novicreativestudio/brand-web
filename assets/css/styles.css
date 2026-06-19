@@ -629,224 +629,682 @@ button{font:inherit}
   .nav-cta{min-width:clamp(178px,11.5vw,230px)}
 }
 
-@media (max-width:1180px) and (pointer:coarse){
-  .hero-gold-motif{
-    left:-1.2%;
-    bottom:4.6%;
-    width:61%;
-    min-width:560px;
-  }
+/* Subtle handwritten-style underline below the hero's gold word */
+.gold-word::after{
+  content:"";
+  position:absolute;
+  left:.08em;
+  right:.04em;
+  bottom:-.12em;
+  height:.11em;
+  border-radius:999px;
+  background:
+    linear-gradient(90deg,
+      transparent 0%,
+      rgba(255,230,150,.16) 7%,
+      rgba(239,200,106,.82) 28%,
+      rgba(193,135,50,.9) 62%,
+      rgba(255,231,158,.5) 88%,
+      transparent 100%);
+  transform:rotate(-2.2deg) skewX(-8deg);
+  filter:drop-shadow(0 1px 0 rgba(0,0,0,.18));
+  opacity:.86;
 }
-@media (max-width:1024px) and (pointer:coarse){
-  .hero-gold-motif{
-    left:-3.8%;
-    bottom:4.3%;
-    width:67%;
-    min-width:520px;
-  }
+.gold-word::before{
+  content:"";
+  position:absolute;
+  left:.16em;
+  right:.22em;
+  bottom:-.17em;
+  height:.045em;
+  border-radius:999px;
+  background:rgba(255,239,177,.46);
+  transform:rotate(-1deg);
+  opacity:.48;
 }
-@media (max-width:768px) and (pointer:coarse){
-  .hero-gold-motif{
-    left:-5.7%;
-    bottom:4.0%;
-    width:74%;
-    min-width:480px;
+
+/* Desktop zoom stability:
+   Keep the approved desktop composition on fine-pointer devices even when browser zoom changes CSS viewport width. */
+@media (pointer:fine){
+  .hero-visual{
+    height:clamp(390px,25.5vw,430px);
   }
-}
-@media (max-width:640px) and (pointer:coarse){
-  .hero-gold-motif{
-    left:-18%;
-    bottom:13.8%;
-    width:116%;
-    min-width:0;
-    opacity:.9;
+  .hero-picture img{
+    object-position:53% 34%;
   }
-}
-@media (max-width:430px) and (pointer:coarse){
+  .hero-copy{
+    left:18%;
+    top:24.8%;
+  }
   .hero-gold-motif{
-    left:-23%;
-    bottom:14.6%;
-    width:129%;
+    left:0%;
+    bottom:4.2%;
+    width:57%;
+    max-width:930px;
+    min-width:620px;
+  }
+  .site-nav{
+    white-space:nowrap;
   }
 }
 
-@media (max-width:1180px) and (pointer:coarse){
-  .site-header{padding-inline:42px;gap:22px}
-  .brand{gap:13px}
-  .brand-mark{width:56px;height:56px}
-  .brand-text strong{font-size:30px;letter-spacing:.22em}
-  .site-nav{gap:22px}
-  .nav-cta{min-width:164px;padding-inline:16px}
-  .hero-copy{left:13.5%;top:27.5%;width:min(500px,42vw)}
-  .hero-copy h1{font-size:clamp(34px,3.9vw,48px)}
-  .service-cards{width:min(calc(100% - 56px),1050px)}
+/* Clean responsive production rules
+   Final mobile design:
+   - mobile menu fixed by viewport width
+   - no separate gold sprout motif on mobile
+   - pink Our Services label
+   - top and bottom gold line + sparkle sets around the label
+   - cards positioned with approved spacing
+*/
+html,
+body{
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
 }
 
-@media (max-width:1024px) and (pointer:coarse){
-  .top-ribbon{height:57px}
-  .top-ribbon p{font-size:clamp(12px,1.7vw,16px);letter-spacing:.42em}
-  .ribbon-drop{bottom:-19px;width:17px;height:33px}
-  .site-header{min-height:106px;padding:0 clamp(30px,5.7vw,56px)}
-  .brand{gap:13px}
-  .brand-mark{width:58px;height:58px}
-  .brand-text strong{font-size:34px;letter-spacing:.22em}
-  .brand-text small{font-size:9.5px;letter-spacing:.16em}
+.top-ribbon,
+.site-header{
+  overflow:visible;
+}
+
+@media (max-width:1024px){
+  .site-header{
+    position:relative;
+    z-index:1000;
+  }
+
+  .mobile-menu{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:0;
+    border:0;
+    background:transparent;
+    padding:0;
+    cursor:pointer;
+    color:#071327;
+  }
+
+  .mobile-menu span{
+    display:none;
+  }
+
+  .mobile-menu i,
+  .mobile-menu i::before,
+  .mobile-menu i::after{
+    content:"";
+    display:block;
+    width:42px;
+    height:2.5px;
+    background:#b37a29;
+    border-radius:999px;
+    transition:transform .22s ease,opacity .22s ease,background .22s ease;
+  }
+
+  .mobile-menu i{
+    position:relative;
+  }
+
+  .mobile-menu i::before{
+    position:absolute;
+    top:-13px;
+    left:0;
+  }
+
+  .mobile-menu i::after{
+    position:absolute;
+    top:13px;
+    left:0;
+  }
+
+  body.nav-open .mobile-menu i{
+    background:transparent;
+  }
+
+  body.nav-open .mobile-menu i::before{
+    transform:translateY(13px) rotate(45deg);
+  }
+
+  body.nav-open .mobile-menu i::after{
+    transform:translateY(-13px) rotate(-45deg);
+  }
+
   .site-nav{
     position:absolute;
-    left:clamp(24px,5vw,56px);
-    right:clamp(24px,5vw,56px);
-    top:calc(100% - 6px);
-    z-index:24;
+    left:18px;
+    right:18px;
+    top:calc(100% + 8px);
+    z-index:1001;
     display:grid;
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:0;
+    grid-template-columns:1fr;
+    gap:6px;
     padding:14px;
-    background:rgba(255,250,243,.98);
-    border:1px solid rgba(192,144,68,.25);
+    background:rgba(255,250,243,.985);
+    border:1px solid rgba(192,144,68,.26);
     border-radius:18px;
-    box-shadow:0 18px 35px rgba(6,17,39,.16);
+    box-shadow:0 18px 35px rgba(6,17,39,.18);
     opacity:0;
     visibility:hidden;
     pointer-events:none;
     transform:translateY(-8px);
     transition:opacity .22s ease,transform .22s ease,visibility .22s ease;
     animation:none;
+    white-space:normal;
   }
-  body.nav-open .site-nav{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
-  .site-nav a{padding:15px 18px;text-align:center;border-radius:12px}
-  .site-nav a:not(.nav-cta):hover{background:#fbf1e6;transform:none}
-  .site-nav .nav-cta{grid-column:1/-1;margin-top:8px;min-width:0}
-  .mobile-menu{
-    display:flex;
-    align-items:center;
-    gap:27px;
-    border:0;
-    background:transparent;
-    padding:0;
-    cursor:pointer;
-    font-family:var(--display);
-    font-size:25px;
-    letter-spacing:.06em;
-    text-transform:uppercase;
+
+  body.nav-open .site-nav{
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+    transform:translateY(0);
+  }
+
+  .site-nav a{
+    display:block;
+    width:100%;
+    padding:12px 14px;
+    text-align:center;
+    border-radius:12px;
     color:#071327;
   }
+
+  .site-nav a:not(.nav-cta):hover,
+  .site-nav a:not(.nav-cta):focus-visible{
+    background:#fbf1e6;
+    transform:none;
+  }
+
+  .site-nav .nav-cta{
+    grid-column:1/-1;
+    margin-top:4px;
+    min-width:0;
+    width:100%;
+    padding:13px 16px;
+    border-radius:13px;
+    color:#fff6d0;
+  }
+}
+
+@media (max-width:640px){
+  .top-ribbon{
+    width:100vw;
+    height:46px;
+  }
+
+  .top-ribbon p{
+    max-width:calc(100vw - 34px);
+    overflow:hidden;
+    white-space:nowrap;
+    text-align:center;
+    font-size:clamp(8px,2.28vw,10px);
+    letter-spacing:.22em;
+    transform:none;
+  }
+
+  .top-ribbon p::before{left:-12px}
+  .top-ribbon p::after{right:-12px}
+
+  .ribbon-drop{
+    width:17px;
+    height:36px;
+    bottom:-16px;
+    z-index:1102;
+    box-shadow:0 0 14px rgba(245,215,115,.34),0 2px 7px rgba(70,42,4,.34);
+  }
+
+  .ribbon-drop::before{
+    top:-42px;
+    height:49px;
+  }
+
+  .site-header{
+    width:100vw;
+    min-height:108px;
+    padding-inline:20px;
+  }
+
+  .brand{
+    gap:12px;
+    align-items:center;
+  }
+
+  .brand-mark{
+    width:58px;
+    height:58px;
+  }
+
+  .brand-text{
+    display:grid;
+    grid-template-columns:max-content;
+    width:max-content;
+    min-width:0;
+    align-items:start;
+  }
+
+  .brand-text strong{
+    font-size:30px;
+    line-height:.96;
+    letter-spacing:.15em;
+    transform:none;
+  }
+
+  .brand-text small{
+    display:block;
+    justify-self:center;
+    width:100%;
+    margin-top:7px;
+    font-size:8.4px;
+    line-height:1;
+    letter-spacing:.13em;
+    text-align:center;
+    transform:translateX(-.08em);
+  }
+
+  .site-nav{
+    max-height:calc(100svh - 190px);
+    overflow:auto;
+  }
+
   .mobile-menu i,
   .mobile-menu i::before,
   .mobile-menu i::after{
+    width:36px;
+  }
+
+  .mobile-menu i::before{
+    top:-12px;
+  }
+
+  .mobile-menu i::after{
+    top:12px;
+  }
+
+  body.nav-open .mobile-menu i::before{
+    transform:translateY(12px) rotate(45deg);
+  }
+
+  body.nav-open .mobile-menu i::after{
+    transform:translateY(-12px) rotate(-45deg);
+  }
+
+  .hero-visual{
+    position:relative;
+    z-index:30;
+    width:100vw;
+    height:204px;
+    min-height:204px;
+    overflow:visible;
+    isolation:isolate;
+  }
+
+  .hero-picture{
+    inset:0;
+    overflow:hidden;
+    z-index:1;
+  }
+
+  .hero-picture img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:56% 0%;
+    transform:none;
+  }
+
+  .hero-copy{
+    z-index:40;
+    left:6.2%;
+    top:26.7%;
+    width:66%;
+    max-width:268px;
+  }
+
+  .hero-copy h1{
+    font-size:23px;
+    line-height:1.01;
+    letter-spacing:.002em;
+  }
+
+  .hero-line{
+    white-space:nowrap;
+  }
+
+  .hero-copy .gold-word{
+    font-size:1.22em;
+  }
+
+  .hero-spark{
+    width:6px;
+    height:6px;
+  }
+
+  .spark-three{
+    z-index:41;
+    left:4.6%;
+    top:45.8%;
+  }
+
+  .spark-two{
+    z-index:41;
+    left:54.2%;
+    top:39.1%;
+  }
+
+  .hero-gold-motif{
+    display:none;
+  }
+
+  .hero-green-wave{
+    z-index:24;
+    left:-1px;
+    right:-1px;
+    width:calc(100% + 2px);
+    height:43%;
+    bottom:-18px;
+    opacity:1;
+    display:block;
+    pointer-events:none;
+  }
+
+  .hero-green-fill{
+    fill:#063c33;
+  }
+
+  .hero-gold-line{
+    stroke:#f6d875;
+    stroke-width:15.5;
+    opacity:1;
+    filter:drop-shadow(0 0 9px rgba(245,215,115,.46));
+  }
+
+  .hero-gold-dash{
+    opacity:.52;
+    stroke-width:2;
+  }
+
+  .services-section{
+    position:relative;
+    z-index:2;
+    width:100vw;
+    margin-top:-50px;
+    min-height:388px;
+    padding:72px 22px 92px;
+    overflow:hidden;
+    background:
+      radial-gradient(ellipse at 50% 31%,rgba(255,255,255,.07),transparent 42%),
+      linear-gradient(180deg,#063c33 0%,#063c33 18%,#06372f 55%,#03251f 100%);
+  }
+
+  .services-pink-sweep{
+    display:none;
+  }
+
+  .services-copy{
+    z-index:7;
+    max-width:900px;
+    margin:0 auto;
+  }
+
+  .services-copy .tiny-star{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    width:auto;
+    height:auto;
+    margin:0 auto 10px;
+    color:#f5d773;
+    font-size:13px;
+    line-height:1;
+    text-shadow:0 0 12px rgba(245,215,115,.45);
+    background:none;
+    animation:starPulse 3s ease-in-out infinite;
+  }
+
+  .services-copy .tiny-star::before,
+  .services-copy .tiny-star::after{
     content:"";
     display:block;
-    width:51px;
-    height:2px;
-    background:#b37a29;
-    transition:transform .22s ease,opacity .22s ease;
+    width:76px;
+    height:1px;
+    background:linear-gradient(90deg,transparent,rgba(200,146,50,.72),transparent);
   }
-  .mobile-menu i{position:relative}
-  .mobile-menu i::before{position:absolute;top:-15px;left:0}
-  .mobile-menu i::after{position:absolute;top:15px;left:0}
-  body.nav-open .mobile-menu i{background:transparent}
-  body.nav-open .mobile-menu i::before{transform:translateY(15px) rotate(45deg)}
-  body.nav-open .mobile-menu i::after{transform:translateY(-15px) rotate(-45deg)}
-  .hero-visual{aspect-ratio:1600 / 430;min-height:390px}
-  .hero-picture img{object-position:50% 32%}
-  .hero-copy{left:11.5%;top:29%;width:min(430px,46vw)}
-  .hero-copy h1{font-size:clamp(30px,4.2vw,42px);line-height:1.04}
-  .hero-green-wave{height:18%}
-  .services-section{min-height:430px;padding:64px 60px 126px}
-  .services-copy{margin-top:-36px}
-  .services-pink-sweep{top:-92px;right:-15%;width:62%;height:168px}
-  .tiny-star{display:none}
-  .eyebrow{font-size:15px;letter-spacing:.42em;margin-bottom:16px}
-  .divider{margin:14px auto 14px}
-  .divider span{width:86px}
-  .intro{font-size:26px;line-height:1.2;max-width:680px}
-  .desktop-only{display:none}
-  .service-cards{width:calc(100% - 122px);margin-top:-164px;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px 18px}
-  .service-card{min-height:331px;border-radius:12px;padding:17px 25px 27px}
-  .icon-circle{width:108px;height:108px;margin-bottom:30px}
-  .icon-circle svg{width:62px;height:62px;stroke-width:2.05}
-  .service-card h2{font-size:33px;margin-bottom:20px}
-  .service-card p{font-size:22px;line-height:1.15;max-width:290px;min-height:86px}
-  .card-line{padding-top:25px}
-  .card-line b{font-size:22px}
-  .bottom-waves{height:112px;margin-top:1px}
-}
 
-@media (max-width:768px) and (pointer:coarse){
-  .hero-visual{aspect-ratio:1600 / 430;min-height:390px}
-  .hero-copy{left:8%;top:27%;width:52vw}
-  .hero-copy h1{font-size:clamp(28px,4.8vw,36px)}
-  .services-section{min-height:400px;padding:60px 42px 118px}
-  .services-copy{margin-top:-28px}
-  .intro{font-size:clamp(22px,3.4vw,26px)}
-  .service-cards{width:calc(100% - 64px)}
-}
-
-@media (max-width:640px) and (pointer:coarse){
-  .hero-visual{height:clamp(610px,138vw,760px);aspect-ratio:auto}
-  .hero-picture img{object-position:48% 2%}
-  .hero-copy{
-    left:7.5%;
-    right:7.5%;
-    top:11%;
+  .services-copy .eyebrow{
+    position:relative;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
     width:auto;
-    text-align:left;
+    max-width:calc(100% - 40px);
+    padding:12px 26px 11px;
+    margin:0 auto 18px;
+    border-radius:10px;
+    background:linear-gradient(180deg,#da8ca3 0%,#cc7891 100%);
+    border:1px solid rgba(241,206,115,.34);
+    box-shadow:0 10px 20px rgba(100,25,49,.18), inset 0 1px 0 rgba(255,255,255,.26);
+    letter-spacing:.34em;
+    line-height:1;
+    text-shadow:none;
+    transform:none;
   }
-  .hero-copy h1{font-size:clamp(31px,8vw,44px);line-height:1.02}
-  .spark-two{left:61%;top:28%}
-  .spark-three{left:12%;top:34%}
-  .hero-green-wave{height:18%}
+
+  .services-copy .eyebrow::before,
+  .services-copy .eyebrow::after{
+    content:"✦";
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:13px;
+    line-height:1;
+    color:var(--gold-light);
+    text-shadow:0 0 14px rgba(245,215,115,.4);
+    animation:sparkPulse 2.6s ease-in-out infinite;
+    pointer-events:none;
+  }
+
+  .services-copy .eyebrow::before{
+    left:-20px;
+    animation-delay:.3s;
+  }
+
+  .services-copy .eyebrow::after{
+    right:-20px;
+    animation-delay:1.2s;
+  }
+
+  .divider{
+    margin:10px auto 16px;
+  }
+
+  .intro{
+    max-width:355px;
+    font-size:clamp(18px,5vw,21px);
+    line-height:1.12;
+  }
+
+  .service-cards{
+    width:calc(100% - 34px);
+    max-width:100vw;
+    margin:-86px auto 0;
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+    z-index:6;
+  }
+
+  .service-card{
+    min-height:174px;
+    padding:34px 12px 16px;
+    border-radius:12px;
+  }
+
+  .icon-circle{
+    width:64px;
+    height:64px;
+    margin-bottom:14px;
+  }
+
+  .icon-circle svg{
+    width:37px;
+    height:37px;
+  }
+
+  .service-card h2{
+    font-size:20px;
+    line-height:1;
+    margin-bottom:9px;
+  }
+
+  .service-card p{
+    font-size:13.2px;
+    line-height:1.12;
+    min-height:0;
+  }
+
+  .card-line{
+    padding-top:11px;
+  }
 }
 
-@media (max-width:620px) and (pointer:coarse){
-  .top-ribbon{height:46px}
-  .top-ribbon p{font-size:11px;letter-spacing:.34em}
-  .top-ribbon p::before{left:-22px}
-  .top-ribbon p::after{right:-22px}
-  .site-header{min-height:92px;padding:0 24px}
-  .brand{gap:10px}
-  .brand-mark{width:46px;height:46px}
-  .brand-text strong{font-size:25px;letter-spacing:.15em}
-  .brand-text small{font-size:8px;letter-spacing:.1em;margin-top:5px}
-  .mobile-menu{font-size:18px;gap:16px}
-  .mobile-menu i,.mobile-menu i::before,.mobile-menu i::after{width:38px}
-  .mobile-menu i::before{top:-12px}
-  .mobile-menu i::after{top:12px}
-  body.nav-open .mobile-menu i::before{transform:translateY(12px) rotate(45deg)}
-  body.nav-open .mobile-menu i::after{transform:translateY(-12px) rotate(-45deg)}
-  .site-nav{grid-template-columns:1fr;top:calc(100% - 3px);left:18px;right:18px}
-  .hero-spark{width:6px;height:6px}
-  .glow-window{display:none}
-  .services-section{min-height:455px;padding:56px 28px 112px}
-  .services-copy{margin-top:-14px}
-  .services-pink-sweep{top:-74px;right:-23%;width:70%;height:132px}
-  .eyebrow{font-size:13px;letter-spacing:.34em}
-  .intro{font-size:21px}
-  .service-cards{width:calc(100% - 48px);grid-template-columns:1fr;gap:16px;margin-top:-98px}
-  .service-card{min-height:286px}
+@media (max-width:430px){
+  .site-header{
+    min-height:106px;
+  }
+
+  .brand-mark{
+    width:55px;
+    height:55px;
+  }
+
+  .brand-text strong{
+    font-size:28px;
+    letter-spacing:.145em;
+  }
+
+  .brand-text small{
+    font-size:7.7px;
+    letter-spacing:.12em;
+    margin-top:6px;
+    transform:translateX(-.1em);
+  }
+
+  .hero-visual{
+    height:200px;
+    min-height:200px;
+  }
+
+  .hero-copy{
+    left:6%;
+    top:27.2%;
+    width:67%;
+    max-width:256px;
+  }
+
+  .hero-copy h1{
+    font-size:22.6px;
+  }
+
+  .hero-copy .gold-word{
+    font-size:1.24em;
+  }
+
+  .spark-two{
+    left:54.4%;
+    top:39.4%;
+  }
+
+  .services-section{
+    min-height:396px;
+    padding-bottom:96px;
+  }
+
+  .services-copy .tiny-star{
+    gap:10px;
+    margin-bottom:8px;
+  }
+
+  .services-copy .tiny-star::before,
+  .services-copy .tiny-star::after{
+    width:68px;
+  }
+
+  .services-copy .eyebrow{
+    padding:11px 24px 10px;
+    letter-spacing:.3em;
+  }
+
+  .services-copy .eyebrow::before{
+    left:-18px;
+  }
+
+  .services-copy .eyebrow::after{
+    right:-18px;
+  }
+
+  .service-cards{
+    margin:-82px auto 0;
+  }
 }
 
-@media (max-width:430px) and (pointer:coarse){
-  .top-ribbon p{font-size:10px;letter-spacing:.28em}
-  .top-ribbon p::before{left:-18px}
-  .top-ribbon p::after{right:-18px}
-  .site-header{min-height:88px;padding-inline:20px}
-  .brand-mark{width:43px;height:43px}
-  .brand-text strong{font-size:24px;letter-spacing:.14em}
-  .brand-text small{font-size:7.5px;letter-spacing:.09em;margin-top:4px}
-  .mobile-menu span{display:none}
-  .mobile-menu i,.mobile-menu i::before,.mobile-menu i::after{width:36px}
-  .hero-copy{top:10.5%}
-  .hero-copy h1{font-size:clamp(29px,7.6vw,34px)}
-  .services-section{min-height:430px;padding-inline:24px}
-  .services-copy{margin-top:-10px}
-  .intro{font-size:20px}
-}
+@media (max-width:390px){
+  .brand-mark{
+    width:52px;
+    height:52px;
+  }
 
-@media (max-width:390px) and (pointer:coarse){
-  .brand-mark{width:40px;height:40px}
-  .brand-text strong{font-size:22px;letter-spacing:.13em}
-  .brand-text small{display:none}
-  .hero-copy h1{font-size:28px}
+  .brand-text strong{
+    font-size:26px;
+  }
+
+  .brand-text small{
+    font-size:7.1px;
+  }
+
+  .hero-visual{
+    height:194px;
+    min-height:194px;
+  }
+
+  .hero-copy{
+    left:5.7%;
+    top:27.4%;
+    width:68%;
+    max-width:244px;
+  }
+
+  .hero-copy h1{
+    font-size:21.4px;
+  }
+
+  .hero-copy .gold-word{
+    font-size:1.22em;
+  }
+
+  .spark-two{
+    left:54.8%;
+    top:39.6%;
+  }
+
+  .hero-green-wave{
+    height:46%;
+    bottom:-20px;
+  }
+
+  .services-section{
+    min-height:404px;
+    padding-bottom:100px;
+  }
+
+  .services-copy .eyebrow{
+    padding:10px 16px 9px;
+    letter-spacing:.27em;
+  }
+
+  .service-cards{
+    margin:-76px auto 0;
+  }
 }
 
 @media (prefers-reduced-motion:reduce){
@@ -890,1109 +1348,58 @@ button{font:inherit}
 }
 
 
-/* Subtle handwritten-style underline below the hero's gold word */
-.gold-word::after{
-  content:"";
-  position:absolute;
-  left:.08em;
-  right:.04em;
-  bottom:-.12em;
-  height:.11em;
-  border-radius:999px;
-  background:
-    linear-gradient(90deg,
-      transparent 0%,
-      rgba(255,230,150,.16) 7%,
-      rgba(239,200,106,.82) 28%,
-      rgba(193,135,50,.9) 62%,
-      rgba(255,231,158,.5) 88%,
-      transparent 100%);
-  transform:rotate(-2.2deg) skewX(-8deg);
-  filter:drop-shadow(0 1px 0 rgba(0,0,0,.18));
-  opacity:.86;
-}
-.gold-word::before{
-  content:"";
-  position:absolute;
-  left:.16em;
-  right:.22em;
-  bottom:-.17em;
-  height:.045em;
-  border-radius:999px;
-  background:rgba(255,239,177,.46);
-  transform:rotate(-1deg);
-  opacity:.48;
+/* webp34: gold ribbon drop only fix */
+.top-ribbon{
+  position:relative;
+  overflow:visible;
+  z-index:1200;
 }
 
-
-/* Desktop zoom stability:
-   Keep the approved desktop composition on fine-pointer devices even when browser zoom changes CSS viewport width.
-   Mobile/tablet responsive rules are gated with pointer:coarse above. */
-@media (pointer:fine){
-  .hero-visual{
-    height:clamp(390px,25.5vw,430px);
-  }
-  .hero-picture img{
-    object-position:53% 34%;
-  }
-  .hero-copy{
-    left:18%;
-    top:24.8%;
-  }
-  .hero-gold-motif{
-    left:0%;
-    bottom:4.2%;
-    width:57%;
-    max-width:930px;
-    min-width:620px;
-  }
-  .site-nav{
-    white-space:nowrap;
-  }
-}
-
-
-/* webp7 mobile layer fix
-   Clean final override:
-   - FV decoration stays in front of Services background
-   - green/pink waves no longer hide the gold sprout and wave
-   - gold sprout aligns with the crest of the gold wave
-   - Our Services and 4 cards move upward together
-   - mobile copy stays large and 2-line
-*/
-html,
-body{
-  width:100%;
-  max-width:100%;
-  overflow-x:hidden !important;
-}
-
-.top-ribbon,
 .site-header{
-  overflow:visible !important;
-}
-
-main,
-.hero-picture,
-.services-section,
-.service-cards,
-.bottom-waves{
-  max-width:100vw;
-  overflow-x:hidden;
+  position:relative;
+  z-index:1000;
 }
 
 .ribbon-drop{
-  width:16px !important;
-  height:34px !important;
-  bottom:-18px !important;
-  z-index:90 !important;
-  box-shadow:0 0 13px rgba(245,215,115,.28),0 2px 6px rgba(70,42,4,.32) !important;
+  width:16px;
+  height:34px;
+  bottom:-17px;
+  z-index:1202;
+  overflow:visible;
+  border-radius:999px;
+  clip-path:none;
+  transform:none;
+  box-shadow:0 0 13px rgba(245,215,115,.32),0 2px 7px rgba(70,42,4,.32);
 }
+
 .ribbon-drop::before{
-  top:-40px !important;
-  height:47px !important;
+  top:-39px;
+  height:45px;
 }
 
 @media (max-width:640px){
   .top-ribbon{
-    width:100vw !important;
-    max-width:100vw !important;
-    overflow:visible !important;
+    height:48px;
+    overflow:visible;
+    z-index:1200;
   }
-
-  .top-ribbon p{
-    max-width:calc(100vw - 34px) !important;
-    overflow:hidden !important;
-    white-space:nowrap !important;
-    text-align:center !important;
-    font-size:clamp(8px,2.28vw,10px) !important;
-    letter-spacing:.22em !important;
-    transform:none !important;
-  }
-
-  .top-ribbon p::before{left:-12px !important}
-  .top-ribbon p::after{right:-12px !important}
 
   .site-header{
-    width:100vw !important;
-    max-width:100vw !important;
-    min-height:108px !important;
-    padding-inline:20px !important;
-    overflow:visible !important;
-  }
-
-  .brand{
-    gap:12px !important;
-    align-items:center !important;
-  }
-
-  .brand-mark{
-    width:58px !important;
-    height:58px !important;
-  }
-
-  .brand-text{
-    display:grid !important;
-    grid-template-columns:max-content !important;
-    width:max-content !important;
-    min-width:0 !important;
-    align-items:start !important;
-  }
-
-  .brand-text strong{
-    font-size:30px !important;
-    line-height:.96 !important;
-    letter-spacing:.15em !important;
-    transform:none !important;
-  }
-
-  .brand-text small{
-    display:block !important;
-    justify-self:center !important;
-    width:100% !important;
-    margin-top:7px !important;
-    font-size:8.4px !important;
-    line-height:1 !important;
-    letter-spacing:.13em !important;
-    text-align:center !important;
-    transform:translateX(-.08em) !important;
-  }
-
-  /* FV must sit above the following green/pink Services layers.
-     The image remains clipped by .hero-picture; only the decorative wave group can overlap. */
-  .hero-visual{
-    position:relative !important;
-    z-index:30 !important;
-    width:100vw !important;
-    max-width:100vw !important;
-    height:204px !important;
-    min-height:204px !important;
-    overflow:visible !important;
-    isolation:isolate !important;
-  }
-
-  .hero-picture{
-    inset:0 !important;
-    overflow:hidden !important;
-    z-index:1 !important;
-  }
-
-  .hero-picture img{
-    width:100% !important;
-    height:100% !important;
-    object-fit:cover !important;
-    object-position:56% 0% !important;
-    transform:none !important;
-  }
-
-  .hero-visual::after{
-    z-index:2 !important;
-    inset:0 !important;
-  }
-
-  .hero-copy{
-    z-index:40 !important;
-    left:6.2% !important;
-    top:26.7% !important;
-    width:66% !important;
-    max-width:268px !important;
-  }
-
-  .hero-copy h1{
-    font-size:23px !important;
-    line-height:1.01 !important;
-    letter-spacing:.002em !important;
-  }
-
-  .hero-line{
-    white-space:nowrap !important;
-  }
-
-  .spark-three{
-    z-index:41 !important;
-    left:3.8% !important;
-    top:45% !important;
-  }
-
-  .spark-two{
-    z-index:41 !important;
-    left:58% !important;
-    top:39% !important;
-  }
-
-  /* Gold motif is below the green fill, so lower stems are hidden.
-     The sprout sits above the green crest because it is higher in the image. */
-  .hero-gold-motif{
-    z-index:18 !important;
-    left:-6.4% !important;
-    bottom:8px !important;
-    width:118% !important;
-    min-width:0 !important;
-    max-width:none !important;
-    opacity:.98 !important;
-    transform:none !important;
-    mix-blend-mode:screen !important;
-    pointer-events:none !important;
-  }
-
-  /* This SVG becomes the visible front boundary between FV and Services. */
-  .hero-green-wave{
-    z-index:24 !important;
-    left:-1px !important;
-    right:-1px !important;
-    width:calc(100% + 2px) !important;
-    height:43% !important;
-    bottom:-18px !important;
-    opacity:1 !important;
-    display:block !important;
-    pointer-events:none !important;
-  }
-
-  .hero-green-fill{
-    fill:#063c33 !important;
-  }
-
-  .hero-gold-line{
-    stroke:#f6d875 !important;
-    stroke-width:15.5 !important;
-    opacity:1 !important;
-    filter:drop-shadow(0 0 9px rgba(245,215,115,.46)) !important;
-  }
-
-  .hero-gold-dash{
-    opacity:.52 !important;
-    stroke-width:2 !important;
-  }
-
-  /* Services background goes behind the FV wave. Only the text/cards are lifted. */
-  .services-section{
-    position:relative !important;
-    z-index:2 !important;
-    width:100vw !important;
-    max-width:100vw !important;
-    margin-top:-50px !important;
-    min-height:350px !important;
-    padding:72px 22px 60px !important;
-    overflow:hidden !important;
-  }
-
-  .services-pink-sweep{
-    z-index:0 !important;
-    top:-76px !important;
-    right:-18% !important;
-    width:66% !important;
-    height:138px !important;
-    border-top:3px solid rgba(239,202,101,.78) !important;
-    border-radius:0 0 0 100%/0 0 0 100% !important;
-    box-shadow:0 -2px 0 rgba(234,199,96,.24) !important;
-  }
-
-  .services-copy{
-    z-index:7 !important;
-    margin-top:-26px !important;
-  }
-
-  .tiny-star{
-    display:block !important;
-    margin-bottom:5px !important;
-  }
-
-  .eyebrow{
-    margin-bottom:12px !important;
-  }
-
-  .divider{
-    margin:9px auto 10px !important;
-  }
-
-  .intro{
-    max-width:350px !important;
-    font-size:clamp(18px,5vw,21px) !important;
-    line-height:1.12 !important;
-  }
-
-  .service-cards{
-    width:calc(100% - 22px) !important;
-    max-width:100vw !important;
-    margin:-128px auto 0 !important;
-    display:grid !important;
-    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
-    gap:10px !important;
-    z-index:6 !important;
-  }
-
-  .service-card{
-    min-height:174px !important;
-    padding:34px 12px 16px !important;
-    border-radius:12px !important;
-  }
-
-  .icon-circle{
-    width:64px !important;
-    height:64px !important;
-    margin-bottom:14px !important;
-  }
-
-  .icon-circle svg{
-    width:37px !important;
-    height:37px !important;
-  }
-
-  .service-card h2{
-    font-size:20px !important;
-    line-height:1 !important;
-    margin-bottom:9px !important;
-  }
-
-  .service-card p{
-    font-size:13.2px !important;
-    line-height:1.12 !important;
-    min-height:0 !important;
-  }
-
-  .card-line{
-    padding-top:11px !important;
-  }
-}
-
-@media (max-width:430px){
-  .site-header{
-    min-height:106px !important;
-  }
-
-  .brand-mark{
-    width:55px !important;
-    height:55px !important;
-  }
-
-  .brand-text strong{
-    font-size:28px !important;
-    letter-spacing:.145em !important;
-  }
-
-  .brand-text small{
-    display:block !important;
-    font-size:7.7px !important;
-    letter-spacing:.12em !important;
-    margin-top:6px !important;
-    transform:translateX(-.1em) !important;
-  }
-
-  .hero-visual{
-    height:200px !important;
-    min-height:200px !important;
-  }
-
-  .hero-copy{
-    left:6% !important;
-    top:27.2% !important;
-    width:67% !important;
-    max-width:256px !important;
-  }
-
-  .hero-copy h1{
-    font-size:22.6px !important;
-  }
-
-  .spark-three{
-    left:3.4% !important;
-    top:45.7% !important;
-  }
-
-  .spark-two{
-    left:58.4% !important;
-    top:39.6% !important;
-  }
-
-  .hero-gold-motif{
-    left:-7.2% !important;
-    bottom:7px !important;
-    width:121% !important;
-  }
-
-  .hero-green-wave{
-    height:45% !important;
-    bottom:-19px !important;
-  }
-
-  .services-section{
-    margin-top:-52px !important;
-    min-height:342px !important;
-    padding-top:72px !important;
-    padding-bottom:56px !important;
-  }
-
-  .services-pink-sweep{
-    top:-78px !important;
-    right:-20% !important;
-    width:68% !important;
-    height:140px !important;
-  }
-
-  .services-copy{
-    margin-top:-28px !important;
-  }
-
-  .service-cards{
-    margin:-132px auto 0 !important;
-  }
-}
-
-@media (max-width:390px){
-  .brand-mark{
-    width:52px !important;
-    height:52px !important;
-  }
-
-  .brand-text strong{
-    font-size:26px !important;
-  }
-
-  .brand-text small{
-    display:block !important;
-    font-size:7.1px !important;
-  }
-
-  .hero-visual{
-    height:194px !important;
-    min-height:194px !important;
-  }
-
-  .hero-copy{
-    left:5.7% !important;
-    top:27.4% !important;
-    width:68% !important;
-    max-width:244px !important;
-  }
-
-  .hero-copy h1{
-    font-size:21.4px !important;
-  }
-
-  .spark-two{
-    left:58.6% !important;
-    top:40% !important;
-  }
-
-  .hero-gold-motif{
-    left:-8.2% !important;
-    bottom:7px !important;
-    width:123% !important;
-  }
-
-  .hero-green-wave{
-    height:46% !important;
-    bottom:-20px !important;
-  }
-
-  .services-section{
-    margin-top:-54px !important;
-    min-height:338px !important;
-  }
-
-  .services-pink-sweep{
-    top:-80px !important;
-    width:70% !important;
-    height:142px !important;
-  }
-
-  .service-cards{
-    margin-top:-136px !important;
-  }
-}
-
-
-
-/* webp28 mobile sprout visible + cards raised
-   Base remains webp24 previous design.
-   Desktop visual design is intentionally preserved.
-   Mobile:
-   - Keep the corrected mobile menu.
-   - Put the gold sprout motif above the green/gold boundary so it is visible.
-   - Move the motif left and down as a bridge toward Our Services.
-   - Raise cards moderately.
-*/
-@media (max-width:1024px){
-  .site-header{
-    position:relative !important;
-    z-index:1000 !important;
-    overflow:visible !important;
-  }
-
-  .mobile-menu{
-    display:flex !important;
-    align-items:center !important;
-    justify-content:center !important;
-    gap:0 !important;
-    border:0 !important;
-    background:transparent !important;
-    padding:0 !important;
-    cursor:pointer !important;
-    color:#071327 !important;
-  }
-
-  .mobile-menu span{
-    display:none !important;
-  }
-
-  .mobile-menu i,
-  .mobile-menu i::before,
-  .mobile-menu i::after{
-    content:"" !important;
-    display:block !important;
-    width:42px !important;
-    height:2.5px !important;
-    background:#b37a29 !important;
-    border-radius:999px !important;
-    transition:transform .22s ease,opacity .22s ease,background .22s ease !important;
-  }
-
-  .mobile-menu i{
-    position:relative !important;
-  }
-
-  .mobile-menu i::before{
-    position:absolute !important;
-    top:-13px !important;
-    left:0 !important;
-  }
-
-  .mobile-menu i::after{
-    position:absolute !important;
-    top:13px !important;
-    left:0 !important;
-  }
-
-  body.nav-open .mobile-menu i{
-    background:transparent !important;
-  }
-
-  body.nav-open .mobile-menu i::before{
-    transform:translateY(13px) rotate(45deg) !important;
-  }
-
-  body.nav-open .mobile-menu i::after{
-    transform:translateY(-13px) rotate(-45deg) !important;
-  }
-
-  .site-nav{
-    position:absolute !important;
-    left:18px !important;
-    right:18px !important;
-    top:calc(100% + 8px) !important;
-    z-index:1001 !important;
-    display:grid !important;
-    grid-template-columns:1fr !important;
-    gap:6px !important;
-    padding:14px !important;
-    background:rgba(255,250,243,.985) !important;
-    border:1px solid rgba(192,144,68,.26) !important;
-    border-radius:18px !important;
-    box-shadow:0 18px 35px rgba(6,17,39,.18) !important;
-    opacity:0 !important;
-    visibility:hidden !important;
-    pointer-events:none !important;
-    transform:translateY(-8px) !important;
-    transition:opacity .22s ease,transform .22s ease,visibility .22s ease !important;
-    animation:none !important;
-    white-space:normal !important;
-  }
-
-  body.nav-open .site-nav{
-    opacity:1 !important;
-    visibility:visible !important;
-    pointer-events:auto !important;
-    transform:translateY(0) !important;
-  }
-
-  .site-nav a{
-    display:block !important;
-    width:100% !important;
-    padding:12px 14px !important;
-    text-align:center !important;
-    border-radius:12px !important;
-    color:#071327 !important;
-  }
-
-  .site-nav .nav-cta{
-    grid-column:1/-1 !important;
-    margin-top:4px !important;
-    min-width:0 !important;
-    width:100% !important;
-    padding:13px 16px !important;
-    border-radius:13px !important;
-    color:#fff6d0 !important;
-  }
-}
-
-@media (max-width:640px){
-  .site-nav{
-    left:18px !important;
-    right:18px !important;
-    top:calc(100% + 8px) !important;
-    max-height:calc(100svh - 190px) !important;
-    overflow:auto !important;
-  }
-
-  .mobile-menu i,
-  .mobile-menu i::before,
-  .mobile-menu i::after{
-    width:36px !important;
-  }
-
-  .mobile-menu i::before{
-    top:-12px !important;
-  }
-
-  .mobile-menu i::after{
-    top:12px !important;
-  }
-
-  body.nav-open .mobile-menu i::before{
-    transform:translateY(12px) rotate(45deg) !important;
-  }
-
-  body.nav-open .mobile-menu i::after{
-    transform:translateY(-12px) rotate(-45deg) !important;
-  }
-
-  .hero-visual{
-    overflow:visible !important;
-    z-index:20 !important;
-  }
-
-  .hero-gold-motif{
-    left:-20% !important;
-    bottom:-8px !important;
-    width:130% !important;
-    min-width:0 !important;
-    opacity:.96 !important;
-    z-index:26 !important;
-    mix-blend-mode:screen !important;
-  }
-
-  .hero-green-wave{
-    z-index:19 !important;
-  }
-
-  .services-section{
-    z-index:2 !important;
-    min-height:342px !important;
-    padding-bottom:74px !important;
-  }
-
-  .services-copy{
-    margin-top:-18px !important;
-  }
-
-  .intro{
-    max-width:355px !important;
-    line-height:1.12 !important;
-  }
-
-  .service-cards{
-    margin:-132px auto 0 !important;
-  }
-}
-
-@media (max-width:430px){
-  .hero-gold-motif{
-    left:-23% !important;
-    bottom:-10px !important;
-    width:134% !important;
-    z-index:26 !important;
-  }
-
-  .services-section{
-    min-height:344px !important;
-    padding-bottom:76px !important;
-  }
-
-  .services-copy{
-    margin-top:-18px !important;
-  }
-
-  .service-cards{
-    margin:-126px auto 0 !important;
-  }
-}
-
-@media (max-width:390px){
-  .hero-gold-motif{
-    left:-25% !important;
-    bottom:-10px !important;
-    width:138% !important;
-  }
-
-  .services-section{
-    min-height:348px !important;
-    padding-bottom:78px !important;
-  }
-
-  .service-cards{
-    margin-top:-120px !important;
-  }
-}
-
-/* webp28 mobile polish
-   Focused fixes only:
-   - restore the gold drop in the pink ribbon
-   - lower the FV sprout slightly so it bridges toward Our Services
-   - move cards down a little from the too-high webp27 state
-   - bring the gold sparkle closer to "purpose."
-   - enlarge the gold word slightly on mobile
-*/
-@media (max-width:1024px){
-  .top-ribbon{
-    z-index:1100 !important;
-    overflow:visible !important;
+    z-index:1000;
+    overflow:visible;
   }
 
   .ribbon-drop{
-    width:17px !important;
-    height:36px !important;
-    bottom:-16px !important;
-    z-index:1102 !important;
-    box-shadow:0 0 14px rgba(245,215,115,.34),0 2px 7px rgba(70,42,4,.34) !important;
-  }
-
-  .ribbon-drop::before{
-    top:-42px !important;
-    height:49px !important;
-  }
-}
-
-@media (max-width:640px){
-  .hero-gold-motif{
-    left:-18% !important;
-    bottom:-22px !important;
-    width:128% !important;
-    z-index:26 !important;
-  }
-
-  .hero-copy .gold-word{
-    font-size:1.12em !important;
-  }
-
-  .spark-two{
-    left:55.5% !important;
-    top:38.4% !important;
-  }
-
-  .services-section{
-    min-height:356px !important;
-    padding-bottom:86px !important;
-  }
-
-  .service-cards{
-    margin:-110px auto 0 !important;
-  }
-}
-
-@media (max-width:430px){
-  .ribbon-drop{
-    width:17px !important;
-    height:37px !important;
-    bottom:-17px !important;
-  }
-
-  .hero-gold-motif{
-    left:-20% !important;
-    bottom:-24px !important;
-    width:131% !important;
-  }
-
-  .hero-copy .gold-word{
-    font-size:1.14em !important;
-  }
-
-  .spark-two{
-    left:55.8% !important;
-    top:38.8% !important;
-  }
-
-  .services-section{
-    min-height:360px !important;
-    padding-bottom:88px !important;
-  }
-
-  .service-cards{
-    margin:-104px auto 0 !important;
-  }
-}
-
-@media (max-width:390px){
-  .hero-gold-motif{
-    left:-21% !important;
-    bottom:-24px !important;
-    width:134% !important;
-  }
-
-  .services-section{
-    padding-bottom:90px !important;
-  }
-
-  .service-cards{
-    margin-top:-100px !important;
-  }
-}
-
-
-/* webp29 mobile simplification
-   - remove the separate sprout motif on mobile
-   - frame Our Services with a pink label
-   - add a few extra sparkles in the FV on mobile only */
-.hero-spark.spark-four,
-.hero-spark.spark-five{display:none;}
-
-@media (max-width:640px){
-  .hero-gold-motif{display:none !important;}
-
-  .spark-two{
-    left:57.2% !important;
-    top:38.1% !important;
-  }
-
-  .spark-three{
-    left:4.6% !important;
-    top:45.8% !important;
-  }
-
-  .hero-spark.spark-four,
-  .hero-spark.spark-five{
-    display:block !important;
-  }
-
-  .spark-four{
-    left:46.8% !important;
-    top:31.8% !important;
-    width:7px !important;
-    height:7px !important;
-    animation-delay:.55s !important;
-  }
-
-  .spark-five{
-    left:59.4% !important;
-    top:27.4% !important;
-    width:5px !important;
-    height:5px !important;
-    animation-delay:1.85s !important;
-    opacity:.72 !important;
-  }
-
-  .services-copy .eyebrow{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    width:auto;
-    max-width:calc(100% - 40px);
-    padding:11px 22px 10px;
-    margin:0 auto 14px;
-    border-radius:10px;
-    background:linear-gradient(180deg,#da8ca3 0%,#cc7891 100%);
-    border:1px solid rgba(241,206,115,.34);
-    box-shadow:0 10px 20px rgba(100,25,49,.18), inset 0 1px 0 rgba(255,255,255,.26);
-    letter-spacing:.34em;
-    line-height:1;
-    text-shadow:none;
+    width:16px;
+    height:34px;
+    bottom:-17px;
+    z-index:1202;
+    clip-path:none;
     transform:none;
   }
 
-  .divider{
-    margin:10px auto 12px;
-  }
-}
-
-@media (max-width:430px){
-  .services-copy .eyebrow{
-    padding:10px 18px 9px;
-    letter-spacing:.3em;
-  }
-
-  .spark-four{
-    left:47.6% !important;
-    top:32.4% !important;
-  }
-
-  .spark-five{
-    left:60.4% !important;
-    top:27.8% !important;
-  }
-}
-
-@media (max-width:390px){
-  .services-copy .eyebrow{
-    padding:10px 16px 9px;
-    letter-spacing:.27em;
-  }
-}
-
-
-/* webp31 mobile polish
-   - keep the simplified mobile hero without the separate sprout
-   - make "purpose." slightly larger
-   - return FV sparkles to a cleaner balance
-   - add subtle sparkle accents around the pink Our Services label
-   - push the service cards lower so they do not overlap the intro text */
-@media (max-width:640px){
-  .hero-spark.spark-four,
-  .hero-spark.spark-five{
-    display:none !important;
-  }
-
-  .spark-two{
-    left:54.2% !important;
-    top:39.1% !important;
-  }
-
-  .hero-copy .gold-word{
-    font-size:1.22em !important;
-  }
-
-  .services-section{
-    min-height:446px !important;
-    padding-bottom:122px !important;
-  }
-
-  .services-copy{
-    position:relative;
-    margin-top:0 !important;
-  }
-
-  .services-copy .tiny-star{
-    display:block !important;
-    margin:0 auto 10px !important;
-    font-size:14px !important;
-    line-height:1 !important;
-    color:var(--gold-light) !important;
-    text-shadow:0 0 14px rgba(245,215,115,.42) !important;
-    animation:sparkPulse 2.6s ease-in-out infinite !important;
-  }
-
-  .services-copy .eyebrow{
-    position:relative;
-    margin:0 auto 18px !important;
-    padding:12px 26px 11px !important;
-  }
-
-  .services-copy .eyebrow::before,
-  .services-copy .eyebrow::after{
-    content:"✦";
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-    font-size:13px;
-    line-height:1;
-    color:var(--gold-light);
-    text-shadow:0 0 14px rgba(245,215,115,.4);
-    animation:sparkPulse 2.6s ease-in-out infinite;
-    pointer-events:none;
-  }
-
-  .services-copy .eyebrow::before{
-    left:-20px;
-    animation-delay:.3s;
-  }
-
-  .services-copy .eyebrow::after{
-    right:-20px;
-    animation-delay:1.2s;
-  }
-
-  .divider{
-    margin:10px auto 16px !important;
-  }
-
-  .service-cards{
-    width:calc(100% - 34px) !important;
-    margin:-64px auto 0 !important;
-  }
-}
-
-@media (max-width:430px){
-  .hero-copy .gold-word{
-    font-size:1.24em !important;
-  }
-
-  .spark-two{
-    left:54.4% !important;
-    top:39.4% !important;
-  }
-
-  .services-section{
-    min-height:462px !important;
-    padding-bottom:126px !important;
-  }
-
-  .services-copy .eyebrow{
-    padding:11px 24px 10px !important;
-  }
-
-  .services-copy .eyebrow::before{
-    left:-18px;
-  }
-
-  .services-copy .eyebrow::after{
-    right:-18px;
-  }
-
-  .service-cards{
-    margin:-56px auto 0 !important;
-  }
-}
-
-@media (max-width:390px){
-  .hero-copy .gold-word{
-    font-size:1.22em !important;
-  }
-
-  .services-section{
-    min-height:476px !important;
-    padding-bottom:132px !important;
-  }
-
-  .service-cards{
-    margin:-46px auto 0 !important;
-  }
-}
-
-
-
-
-/* webp31 mobile card-gap fix
-   v30 made the service cards too low. This keeps the pink Our Services label
-   and sparkle treatment, but tightens the vertical gap so the cards reconnect
-   with the intro without overlapping it.
-*/
-@media (max-width:640px){
-  .services-section{
-    min-height:388px !important;
-    padding-bottom:92px !important;
-  }
-
-  .service-cards{
-    margin:-86px auto 0 !important;
-  }
-}
-
-@media (max-width:430px){
-  .services-section{
-    min-height:396px !important;
-    padding-bottom:96px !important;
-  }
-
-  .service-cards{
-    margin:-82px auto 0 !important;
-  }
-}
-
-@media (max-width:390px){
-  .services-section{
-    min-height:404px !important;
-    padding-bottom:100px !important;
-  }
-
-  .service-cards{
-    margin:-76px auto 0 !important;
+  .ribbon-drop::before{
+    top:-39px;
+    height:45px;
   }
 }
