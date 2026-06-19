@@ -198,3 +198,10 @@ WebP update:
 - Removed duplicate PNG versions of the same FV/hero/motif images from the production ZIP.
 - Kept logo PNG, favicon PNG/ICO, apple-touch-icon, android icons, and OG image unchanged.
 - Cache-busting query strings updated to webp1.
+
+Mobile fix webp2:
+- Added final mobile overflow protection to remove right-side blank/horizontal scroll.
+- Kept WebP image loading.
+- Trimmed mobile FV height and object positioning to cut the lower photo area closer to the gold line.
+- Restored service cards to 2 columns on mobile.
+- Updated cache-busting query strings to webp2.
