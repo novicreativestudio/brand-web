@@ -245,3 +245,11 @@ Image optimization summary:
 - novi-creative-studio-hero-desktop.webp: 50,222 -> 45,806 bytes (recompressed webp)
 - novi-creative-studio-hero-mobile-optimized.webp: 29,640 -> 27,392 bytes (recompressed webp)
 - novi-creative-studio-gold-leaf-light-motif.webp: 56,770 -> 55,334 bytes (recompressed webp)
+
+webp25 mobile fix:
+- Base remains webp24.
+- Fixed mobile menu dropdown by using width-based CSS rules, not pointer/coarse only.
+- Menu now opens directly under the header instead of floating over the Services copy.
+- Moved the gold sprout motif further left on mobile.
+- Lowered mobile service cards so they do not cover the intro text.
+- Cache-busting query strings updated to webp25.

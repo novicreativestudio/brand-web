@@ -1400,3 +1400,236 @@ main,
     margin-top:-136px !important;
   }
 }
+
+
+
+
+/* webp25 mobile menu + sprout position fix
+   Base remains webp24. Desktop visual design is intentionally preserved.
+   Mobile fixes:
+   - Make menu dropdown stable by width, not pointer/coarse only.
+   - Keep menu directly under the header, not floating over Services.
+   - Move gold sprout motif further left.
+   - Lower service cards so they do not cover the intro copy.
+*/
+@media (max-width:1024px){
+  .site-header{
+    position:relative !important;
+    z-index:1000 !important;
+    overflow:visible !important;
+  }
+
+  .mobile-menu{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:0 !important;
+    border:0 !important;
+    background:transparent !important;
+    padding:0 !important;
+    cursor:pointer !important;
+    color:#071327 !important;
+  }
+
+  .mobile-menu span{
+    display:none !important;
+  }
+
+  .mobile-menu i,
+  .mobile-menu i::before,
+  .mobile-menu i::after{
+    content:"" !important;
+    display:block !important;
+    width:42px !important;
+    height:2.5px !important;
+    background:#b37a29 !important;
+    border-radius:999px !important;
+    transition:transform .22s ease,opacity .22s ease,background .22s ease !important;
+  }
+
+  .mobile-menu i{
+    position:relative !important;
+  }
+
+  .mobile-menu i::before{
+    position:absolute !important;
+    top:-13px !important;
+    left:0 !important;
+  }
+
+  .mobile-menu i::after{
+    position:absolute !important;
+    top:13px !important;
+    left:0 !important;
+  }
+
+  body.nav-open .mobile-menu i{
+    background:transparent !important;
+  }
+
+  body.nav-open .mobile-menu i::before{
+    transform:translateY(13px) rotate(45deg) !important;
+  }
+
+  body.nav-open .mobile-menu i::after{
+    transform:translateY(-13px) rotate(-45deg) !important;
+  }
+
+  .site-nav{
+    position:absolute !important;
+    left:18px !important;
+    right:18px !important;
+    top:calc(100% + 10px) !important;
+    z-index:1001 !important;
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:6px !important;
+    padding:14px !important;
+    background:rgba(255,250,243,.985) !important;
+    border:1px solid rgba(192,144,68,.26) !important;
+    border-radius:18px !important;
+    box-shadow:0 18px 35px rgba(6,17,39,.18) !important;
+    opacity:0 !important;
+    visibility:hidden !important;
+    pointer-events:none !important;
+    transform:translateY(-8px) !important;
+    transition:opacity .22s ease,transform .22s ease,visibility .22s ease !important;
+    animation:none !important;
+    white-space:normal !important;
+  }
+
+  body.nav-open .site-nav{
+    opacity:1 !important;
+    visibility:visible !important;
+    pointer-events:auto !important;
+    transform:translateY(0) !important;
+  }
+
+  .site-nav a{
+    display:block !important;
+    width:100% !important;
+    padding:12px 14px !important;
+    text-align:center !important;
+    border-radius:12px !important;
+    color:#071327 !important;
+  }
+
+  .site-nav a:not(.nav-cta){
+    background:transparent !important;
+  }
+
+  .site-nav a:not(.nav-cta):hover,
+  .site-nav a:not(.nav-cta):focus-visible{
+    background:#fbf1e6 !important;
+    transform:none !important;
+  }
+
+  .site-nav .nav-cta{
+    grid-column:1/-1 !important;
+    margin-top:4px !important;
+    min-width:0 !important;
+    width:100% !important;
+    padding:13px 16px !important;
+    border-radius:13px !important;
+    color:#fff6d0 !important;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.16),0 5px 13px rgba(0,0,0,.13) !important;
+  }
+}
+
+@media (max-width:640px){
+  .site-header{
+    z-index:1000 !important;
+  }
+
+  .site-nav{
+    left:18px !important;
+    right:18px !important;
+    top:calc(100% + 8px) !important;
+    max-height:calc(100svh - 190px) !important;
+    overflow:auto !important;
+  }
+
+  .mobile-menu i,
+  .mobile-menu i::before,
+  .mobile-menu i::after{
+    width:36px !important;
+  }
+
+  .mobile-menu i::before{
+    top:-12px !important;
+  }
+
+  .mobile-menu i::after{
+    top:12px !important;
+  }
+
+  body.nav-open .mobile-menu i::before{
+    transform:translateY(12px) rotate(45deg) !important;
+  }
+
+  body.nav-open .mobile-menu i::after{
+    transform:translateY(-12px) rotate(-45deg) !important;
+  }
+
+  .hero-gold-motif{
+    left:-16% !important;
+    bottom:7px !important;
+    width:126% !important;
+    min-width:0 !important;
+    opacity:.9 !important;
+  }
+
+  .services-section{
+    min-height:408px !important;
+    padding-bottom:112px !important;
+  }
+
+  .services-copy{
+    margin-top:-18px !important;
+  }
+
+  .intro{
+    max-width:355px !important;
+    line-height:1.12 !important;
+  }
+
+  .service-cards{
+    margin:-62px auto 0 !important;
+  }
+}
+
+@media (max-width:430px){
+  .hero-gold-motif{
+    left:-18.5% !important;
+    bottom:7px !important;
+    width:129% !important;
+  }
+
+  .services-section{
+    min-height:414px !important;
+    padding-bottom:118px !important;
+  }
+
+  .services-copy{
+    margin-top:-18px !important;
+  }
+
+  .service-cards{
+    margin:-58px auto 0 !important;
+  }
+}
+
+@media (max-width:390px){
+  .hero-gold-motif{
+    left:-21% !important;
+    width:132% !important;
+  }
+
+  .services-section{
+    min-height:420px !important;
+  }
+
+  .service-cards{
+    margin-top:-54px !important;
+  }
+}
