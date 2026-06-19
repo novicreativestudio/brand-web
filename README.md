@@ -178,3 +178,23 @@ v35h update:
 - Woman enlarged by stronger mobile image scale and adjusted object-position.
 - Hero heading returned to 2 lines on mobile.
 - Cache version updated to v35h1.
+
+
+CSS cleanup:
+- Removed accumulated historical mobile/FV override blocks from v30 through v35h8.
+- Kept the stable base CSS, navigation/menu CSS, 404 CSS, desktop stability rules, and the latest v35h9 mobile FV correction.
+- Updated cache-busting query strings to clean1.
+
+
+Favicon update:
+- Rebuilt favicon.ico as a multi-size ICO containing 16x16, 32x32, and 48x48.
+- Added favicon-48x48.png as a reference/export.
+- Kept existing favicon PNG and apple/android icons unchanged.
+
+
+WebP update:
+- Converted FV/hero and gold motif production images to WebP.
+- Updated index.html and 404.html to load WebP images directly.
+- Removed duplicate PNG versions of the same FV/hero/motif images from the production ZIP.
+- Kept logo PNG, favicon PNG/ICO, apple-touch-icon, android icons, and OG image unchanged.
+- Cache-busting query strings updated to webp1.
