@@ -240,3 +240,17 @@ webp8 layer/pink/cards fix:
 - Kept the gold sprout and gold wave visible above the green layer.
 - Increased safe spacing so service cards no longer overlap the Our Services description.
 - Updated cache-busting query strings to webp8.
+
+webp9 CSS cleanup + cache:
+- Removed the old webp8 mobile override block and replaced it with one clean webp9 block.
+- Converted the mobile pink accent from a rectangle-like div into an SVG wave.
+- Lowered the pink wave so it appears as a curved accent, not a block over the hero image.
+- Slightly reduced mobile logo/header height.
+- Kept card spacing safe under the services description.
+- Updated all cache-busting query strings to webp9.
+
+webp10 desktop-safe cache update:
+- Removed the webp9 override block and replaced it with a desktop-safe mobile-only block.
+- Added default .hero-pink-wave { display:none; } so the new SVG cannot show on desktop.
+- Moved ribbon/drop size overrides inside max-width:640px so desktop header/drop sizing is not changed.
+- Cache-busting query strings updated to webp10.

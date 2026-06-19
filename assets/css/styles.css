@@ -952,48 +952,58 @@ button{font:inherit}
 }
 
 
-/* webp8 mobile layer + spacing fix
-   Clean final mobile override.
-   - White logo/header area reduced
-   - Pink wave restored as a hero-layer so it is not hidden behind green/services
-   - Gold sprout + gold wave stay visible above the green layer
-   - Our Services copy no longer overlaps the service cards
-   - Cards stay lifted, but with safe spacing
+/* webp10 desktop-safe mobile cleanup
+   Desktop-safe rules:
+   - mobile-only wave/header/card changes are scoped to max-width:640px
+   - new pink SVG is hidden by default so desktop cannot be affected
+   - desktop ribbon/drop sizing remains controlled by the original desktop CSS
+   - cache version is webp10
 */
+.hero-pink-wave{
+  display:none;
+}
+
 html,
 body{
-  width:100%;
   max-width:100%;
-  overflow-x:hidden !important;
-}
-
-.top-ribbon,
-.site-header{
-  overflow:visible !important;
-}
-
-main,
-.hero-picture,
-.services-section,
-.service-cards,
-.bottom-waves{
-  max-width:100vw;
   overflow-x:hidden;
 }
 
-.ribbon-drop{
-  width:15.5px !important;
-  height:33px !important;
-  bottom:-17px !important;
-  z-index:90 !important;
-  box-shadow:0 0 12px rgba(245,215,115,.27),0 2px 6px rgba(70,42,4,.30) !important;
-}
-.ribbon-drop::before{
-  top:-39px !important;
-  height:46px !important;
-}
-
 @media (max-width:640px){
+  html,
+  body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden !important;
+  }
+
+  .top-ribbon,
+  .site-header{
+    overflow:visible !important;
+  }
+
+  main,
+  .hero-picture,
+  .services-section,
+  .service-cards,
+  .bottom-waves{
+    max-width:100vw;
+    overflow-x:hidden;
+  }
+
+  .ribbon-drop{
+    width:15.5px !important;
+    height:33px !important;
+    bottom:-17px !important;
+    z-index:90 !important;
+    box-shadow:0 0 12px rgba(245,215,115,.27),0 2px 6px rgba(70,42,4,.30) !important;
+  }
+
+  .ribbon-drop::before{
+    top:-39px !important;
+    height:46px !important;
+  }
+
   .top-ribbon{
     width:100vw !important;
     max-width:100vw !important;
@@ -1016,19 +1026,19 @@ main,
   .site-header{
     width:100vw !important;
     max-width:100vw !important;
-    min-height:96px !important;
+    min-height:90px !important;
     padding-inline:20px !important;
     overflow:visible !important;
   }
 
   .brand{
-    gap:11px !important;
+    gap:10px !important;
     align-items:center !important;
   }
 
   .brand-mark{
-    width:53px !important;
-    height:53px !important;
+    width:50px !important;
+    height:50px !important;
   }
 
   .brand-text{
@@ -1040,9 +1050,9 @@ main,
   }
 
   .brand-text strong{
-    font-size:28px !important;
+    font-size:27px !important;
     line-height:.96 !important;
-    letter-spacing:.145em !important;
+    letter-spacing:.14em !important;
     transform:none !important;
   }
 
@@ -1051,9 +1061,9 @@ main,
     justify-self:center !important;
     width:100% !important;
     margin-top:6px !important;
-    font-size:7.7px !important;
+    font-size:7.4px !important;
     line-height:1 !important;
-    letter-spacing:.12em !important;
+    letter-spacing:.115em !important;
     text-align:center !important;
     transform:translateX(-.08em) !important;
   }
@@ -1061,7 +1071,7 @@ main,
   .mobile-menu i,
   .mobile-menu i::before,
   .mobile-menu i::after{
-    width:36px !important;
+    width:35px !important;
   }
 
   .hero-visual{
@@ -1069,8 +1079,8 @@ main,
     z-index:30 !important;
     width:100vw !important;
     max-width:100vw !important;
-    height:200px !important;
-    min-height:200px !important;
+    height:198px !important;
+    min-height:198px !important;
     overflow:visible !important;
     isolation:isolate !important;
   }
@@ -1096,14 +1106,14 @@ main,
 
   .hero-copy{
     z-index:40 !important;
-    left:6% !important;
-    top:27% !important;
-    width:67% !important;
-    max-width:268px !important;
+    left:5.8% !important;
+    top:27.4% !important;
+    width:68% !important;
+    max-width:264px !important;
   }
 
   .hero-copy h1{
-    font-size:22.7px !important;
+    font-size:22.3px !important;
     line-height:1.01 !important;
     letter-spacing:.002em !important;
   }
@@ -1114,22 +1124,21 @@ main,
 
   .spark-three{
     z-index:41 !important;
-    left:3.4% !important;
-    top:45.5% !important;
+    left:3.3% !important;
+    top:45.6% !important;
   }
 
   .spark-two{
     z-index:41 !important;
-    left:58.4% !important;
+    left:58.5% !important;
     top:39.7% !important;
   }
 
-  /* Sprout/glow sits below the green fill so extra stem is hidden, but upper sprout remains visible. */
   .hero-gold-motif{
     z-index:18 !important;
-    left:-7.2% !important;
+    left:-8% !important;
     bottom:7px !important;
-    width:121% !important;
+    width:123% !important;
     min-width:0 !important;
     max-width:none !important;
     opacity:.98 !important;
@@ -1143,8 +1152,8 @@ main,
     left:-1px !important;
     right:-1px !important;
     width:calc(100% + 2px) !important;
-    height:44% !important;
-    bottom:-19px !important;
+    height:45% !important;
+    bottom:-20px !important;
     opacity:1 !important;
     display:block !important;
     pointer-events:none !important;
@@ -1166,22 +1175,28 @@ main,
     stroke-width:2 !important;
   }
 
-  /* Pink wave is now a HERO layer, not a services layer.
-     This prevents it from disappearing behind the green/services section. */
   .hero-pink-wave{
     display:block !important;
     position:absolute !important;
-    z-index:23 !important;
-    right:-19% !important;
-    bottom:-57px !important;
-    width:70% !important;
-    height:112px !important;
+    z-index:26 !important;
+    right:-24% !important;
+    bottom:-88px !important;
+    width:78% !important;
+    height:118px !important;
     pointer-events:none !important;
-    background:linear-gradient(180deg,#eba0ae 0%,#da778a 82%) !important;
-    border-top:3px solid rgba(239,202,101,.76) !important;
-    border-radius:0 0 0 100%/0 0 0 100% !important;
-    box-shadow:0 -2px 0 rgba(234,199,96,.22) !important;
-    transform:rotate(.25deg) !important;
+    overflow:visible !important;
+  }
+
+  .hero-pink-wave .pink-fill{
+    fill:#df8195 !important;
+  }
+
+  .hero-pink-wave .pink-gold-line{
+    fill:none !important;
+    stroke:#efca65 !important;
+    stroke-width:5 !important;
+    stroke-linecap:round !important;
+    opacity:.78 !important;
   }
 
   .services-section{
@@ -1189,13 +1204,12 @@ main,
     z-index:2 !important;
     width:100vw !important;
     max-width:100vw !important;
-    margin-top:-52px !important;
+    margin-top:-54px !important;
     min-height:382px !important;
     padding:74px 22px 112px !important;
     overflow:hidden !important;
   }
 
-  /* Hide old services pink sweep on mobile; the new hero-pink-wave handles it. */
   .services-pink-sweep{
     display:none !important;
   }
@@ -1227,7 +1241,7 @@ main,
   .service-cards{
     width:calc(100% - 22px) !important;
     max-width:100vw !important;
-    margin:-78px auto 0 !important;
+    margin:-82px auto 0 !important;
     display:grid !important;
     grid-template-columns:repeat(2,minmax(0,1fr)) !important;
     gap:10px !important;
@@ -1270,80 +1284,7 @@ main,
 
 @media (max-width:430px){
   .site-header{
-    min-height:94px !important;
-  }
-
-  .brand-mark{
-    width:51px !important;
-    height:51px !important;
-  }
-
-  .brand-text strong{
-    font-size:27px !important;
-    letter-spacing:.14em !important;
-  }
-
-  .brand-text small{
-    display:block !important;
-    font-size:7.3px !important;
-    letter-spacing:.115em !important;
-    margin-top:6px !important;
-    transform:translateX(-.1em) !important;
-  }
-
-  .hero-visual{
-    height:198px !important;
-    min-height:198px !important;
-  }
-
-  .hero-copy{
-    left:5.8% !important;
-    top:27.4% !important;
-    width:68% !important;
-    max-width:256px !important;
-  }
-
-  .hero-copy h1{
-    font-size:22px !important;
-  }
-
-  .hero-gold-motif{
-    left:-8% !important;
-    bottom:7px !important;
-    width:123% !important;
-  }
-
-  .hero-green-wave{
-    height:45% !important;
-    bottom:-20px !important;
-  }
-
-  .hero-pink-wave{
-    right:-21% !important;
-    bottom:-58px !important;
-    width:73% !important;
-    height:114px !important;
-  }
-
-  .services-section{
-    margin-top:-54px !important;
-    min-height:378px !important;
-    padding-top:74px !important;
-    padding-bottom:116px !important;
-  }
-
-  .services-copy{
-    margin-top:-24px !important;
-  }
-
-  .service-cards{
-    margin:-76px auto 0 !important;
-  }
-}
-
-@media (max-width:390px){
-  .site-header{
-    min-height:92px !important;
+    min-height:88px !important;
   }
 
   .brand-mark{
@@ -1352,37 +1293,36 @@ main,
   }
 
   .brand-text strong{
-    font-size:25.5px !important;
+    font-size:26px !important;
+    letter-spacing:.135em !important;
   }
 
   .brand-text small{
     display:block !important;
     font-size:7px !important;
+    letter-spacing:.11em !important;
+    margin-top:5px !important;
+    transform:translateX(-.1em) !important;
   }
 
   .hero-visual{
-    height:192px !important;
-    min-height:192px !important;
+    height:196px !important;
+    min-height:196px !important;
   }
 
   .hero-copy{
     left:5.6% !important;
     top:27.6% !important;
     width:69% !important;
-    max-width:244px !important;
+    max-width:254px !important;
   }
 
   .hero-copy h1{
-    font-size:21px !important;
-  }
-
-  .spark-two{
-    left:58.6% !important;
-    top:40% !important;
+    font-size:21.7px !important;
   }
 
   .hero-gold-motif{
-    left:-8.8% !important;
+    left:-8.6% !important;
     bottom:7px !important;
     width:125% !important;
   }
@@ -1393,18 +1333,83 @@ main,
   }
 
   .hero-pink-wave{
-    right:-23% !important;
-    bottom:-59px !important;
-    width:76% !important;
-    height:116px !important;
+    right:-26% !important;
+    bottom:-91px !important;
+    width:82% !important;
+    height:120px !important;
   }
 
   .services-section{
     margin-top:-56px !important;
+    min-height:378px !important;
+    padding-top:74px !important;
+    padding-bottom:116px !important;
+  }
+
+  .service-cards{
+    margin:-80px auto 0 !important;
+  }
+}
+
+@media (max-width:390px){
+  .site-header{
+    min-height:86px !important;
+  }
+
+  .brand-mark{
+    width:47px !important;
+    height:47px !important;
+  }
+
+  .brand-text strong{
+    font-size:24.5px !important;
+  }
+
+  .brand-text small{
+    display:block !important;
+    font-size:6.8px !important;
+  }
+
+  .hero-visual{
+    height:190px !important;
+    min-height:190px !important;
+  }
+
+  .hero-copy{
+    left:5.4% !important;
+    top:27.8% !important;
+    width:70% !important;
+    max-width:242px !important;
+  }
+
+  .hero-copy h1{
+    font-size:20.7px !important;
+  }
+
+  .hero-gold-motif{
+    left:-9.2% !important;
+    bottom:7px !important;
+    width:127% !important;
+  }
+
+  .hero-green-wave{
+    height:47% !important;
+    bottom:-22px !important;
+  }
+
+  .hero-pink-wave{
+    right:-28% !important;
+    bottom:-92px !important;
+    width:86% !important;
+    height:122px !important;
+  }
+
+  .services-section{
+    margin-top:-58px !important;
     min-height:374px !important;
   }
 
   .service-cards{
-    margin-top:-74px !important;
+    margin-top:-78px !important;
   }
 }
