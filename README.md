@@ -213,3 +213,15 @@ Mobile polish webp4:
 - Restored and emphasized the gold wave line.
 - Aligned the sprout motif with the crest of the gold wave.
 - Adjusted green/pink waves to remain visible as waves.
+
+Mobile polish webp5:
+- Removed obsolete stacked mobile override blocks from v35h9/webp2/webp3/webp4.
+- Added one clean final mobile polish block.
+- Reduced gold drop size while keeping it visible.
+- Restored CREATIVE STUDIO under NOVI on mobile.
+- Enlarged FV copy and kept it two lines.
+- Moved sparkle flakes away from the text; right sparkle beside purpose.
+- Raised gold motif/wave, green wave, and pink wave together.
+- Positioned sprout on the crest of the gold wave while hiding the extra stem.
+- Raised Our Services section balance.
+- Cache-busting query strings updated to webp5.
