@@ -952,21 +952,44 @@ button{font:inherit}
 }
 
 
-/* webp10 desktop-safe mobile cleanup
-   Desktop-safe rules:
-   - mobile-only wave/header/card changes are scoped to max-width:640px
-   - new pink SVG is hidden by default so desktop cannot be affected
-   - desktop ribbon/drop sizing remains controlled by the original desktop CSS
-   - cache version is webp10
+/* webp14 final small-pink + sprout-left adjustment
+   - keep desktop protected
+   - show only a small pink accent on the right, similar to the desktop feel
+   - remove the heavy pink wave / hero pink layer
+   - move the gold sprout motif much further left so the stem sits closer to the gold wave peak
 */
 .hero-pink-wave{
-  display:none;
+  display:none !important;
 }
 
 html,
 body{
   max-width:100%;
   overflow-x:hidden;
+}
+
+/* Narrow desktop / tablet-width desktop preview support */
+@media (min-width:641px) and (max-width:1024px){
+  .hero-gold-motif{
+    left:-22% !important;
+    bottom:4.3% !important;
+    width:118% !important;
+    min-width:0 !important;
+    max-width:none !important;
+  }
+
+  .services-pink-sweep{
+    display:block !important;
+    top:-26px !important;
+    right:-24% !important;
+    width:52% !important;
+    height:92px !important;
+    z-index:1 !important;
+    border-top:3px solid rgba(239,202,101,.72) !important;
+    border-radius:0 0 0 100%/0 0 0 100% !important;
+    background:linear-gradient(180deg,#eba0ae 0%,#da778a 82%) !important;
+    opacity:.95 !important;
+  }
 }
 
 @media (max-width:640px){
@@ -1134,11 +1157,12 @@ body{
     top:39.7% !important;
   }
 
+  /* Stronger left move: previous values were too small to be visible. */
   .hero-gold-motif{
     z-index:18 !important;
-    left:-8% !important;
-    bottom:7px !important;
-    width:123% !important;
+    left:-27% !important;
+    bottom:10px !important;
+    width:134% !important;
     min-width:0 !important;
     max-width:none !important;
     opacity:.98 !important;
@@ -1175,30 +1199,6 @@ body{
     stroke-width:2 !important;
   }
 
-  .hero-pink-wave{
-    display:block !important;
-    position:absolute !important;
-    z-index:26 !important;
-    right:-24% !important;
-    bottom:-88px !important;
-    width:78% !important;
-    height:118px !important;
-    pointer-events:none !important;
-    overflow:visible !important;
-  }
-
-  .hero-pink-wave .pink-fill{
-    fill:#df8195 !important;
-  }
-
-  .hero-pink-wave .pink-gold-line{
-    fill:none !important;
-    stroke:#efca65 !important;
-    stroke-width:5 !important;
-    stroke-linecap:round !important;
-    opacity:.78 !important;
-  }
-
   .services-section{
     position:relative !important;
     z-index:2 !important;
@@ -1210,7 +1210,24 @@ body{
     overflow:hidden !important;
   }
 
+  /* Pink returns only as a small right-side accent, not a large wave. */
   .services-pink-sweep{
+    display:block !important;
+    z-index:1 !important;
+    top:-22px !important;
+    right:-28% !important;
+    width:54% !important;
+    height:84px !important;
+    border-top:3px solid rgba(239,202,101,.70) !important;
+    border-radius:0 0 0 100%/0 0 0 100% !important;
+    background:linear-gradient(180deg,#eba0ae 0%,#da778a 82%) !important;
+    box-shadow:0 -2px 0 rgba(234,199,96,.18) !important;
+    transform:rotate(.25deg) !important;
+    pointer-events:none !important;
+    opacity:.92 !important;
+  }
+
+  .services-pink-sweep::before{
     display:none !important;
   }
 
@@ -1226,6 +1243,10 @@ body{
 
   .eyebrow{
     margin-bottom:12px !important;
+  }
+
+  .eyebrow::after{
+    display:none !important;
   }
 
   .divider{
@@ -1322,9 +1343,9 @@ body{
   }
 
   .hero-gold-motif{
-    left:-8.6% !important;
-    bottom:7px !important;
-    width:125% !important;
+    left:-29% !important;
+    bottom:10px !important;
+    width:138% !important;
   }
 
   .hero-green-wave{
@@ -1332,11 +1353,11 @@ body{
     bottom:-21px !important;
   }
 
-  .hero-pink-wave{
-    right:-26% !important;
-    bottom:-91px !important;
-    width:82% !important;
-    height:120px !important;
+  .services-pink-sweep{
+    top:-24px !important;
+    right:-30% !important;
+    width:56% !important;
+    height:86px !important;
   }
 
   .services-section{
@@ -1387,9 +1408,9 @@ body{
   }
 
   .hero-gold-motif{
-    left:-9.2% !important;
-    bottom:7px !important;
-    width:127% !important;
+    left:-31% !important;
+    bottom:10px !important;
+    width:142% !important;
   }
 
   .hero-green-wave{
@@ -1397,11 +1418,11 @@ body{
     bottom:-22px !important;
   }
 
-  .hero-pink-wave{
-    right:-28% !important;
-    bottom:-92px !important;
-    width:86% !important;
-    height:122px !important;
+  .services-pink-sweep{
+    top:-26px !important;
+    right:-32% !important;
+    width:58% !important;
+    height:88px !important;
   }
 
   .services-section{
