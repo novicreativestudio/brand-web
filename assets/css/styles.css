@@ -1366,3 +1366,152 @@ main,
     height:138px !important;
   }
 }
+
+
+/* webp6 targeted mobile refinement
+   - raise sprout + gold/green/pink wave connection
+   - pull Our Services and cards upward
+   - keep FV copy in 2 balanced lines
+   - slightly reduce the gold drop
+*/
+@media (max-width:640px){
+  .ribbon-drop{
+    width:16px !important;
+    height:34px !important;
+    bottom:-18px !important;
+  }
+  .ribbon-drop::before{
+    top:-40px !important;
+    height:47px !important;
+  }
+
+  .hero-visual{
+    height:210px !important;
+    min-height:210px !important;
+  }
+
+  .hero-picture img{
+    object-position:56% 0% !important;
+  }
+
+  .hero-copy{
+    left:6.4% !important;
+    top:26.8% !important;
+    width:66% !important;
+    max-width:272px !important;
+  }
+
+  .hero-copy h1{
+    font-size:24px !important;
+    line-height:1.01 !important;
+  }
+
+  .spark-three{
+    left:4.2% !important;
+    top:45.2% !important;
+  }
+
+  .spark-two{
+    left:57.2% !important;
+    top:38.8% !important;
+  }
+
+  .hero-gold-motif{
+    left:-5.2% !important;
+    bottom:18px !important;
+    width:115% !important;
+  }
+
+  .hero-green-wave{
+    height:35% !important;
+    bottom:12px !important;
+  }
+
+  .services-section{
+    margin-top:-58px !important;
+    min-height:382px !important;
+    padding:74px 22px 84px !important;
+  }
+
+  .services-copy{
+    margin-top:-24px !important;
+  }
+
+  .services-pink-sweep{
+    top:-74px !important;
+    right:-15% !important;
+    width:63% !important;
+    height:136px !important;
+  }
+
+  .eyebrow{
+    margin-bottom:12px !important;
+  }
+
+  .divider{
+    margin:10px auto 10px !important;
+  }
+
+  .service-cards{
+    width:calc(100% - 22px) !important;
+    margin:-100px auto 0 !important;
+    display:grid !important;
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:10px !important;
+  }
+}
+
+@media (max-width:430px){
+  .hero-visual{
+    height:204px !important;
+    min-height:204px !important;
+  }
+
+  .hero-copy{
+    left:6.2% !important;
+    top:27.1% !important;
+    width:66% !important;
+    max-width:258px !important;
+  }
+
+  .hero-copy h1{
+    font-size:22.8px !important;
+  }
+
+  .spark-three{
+    left:3.6% !important;
+    top:45.5% !important;
+  }
+
+  .spark-two{
+    left:57.1% !important;
+    top:39.2% !important;
+  }
+
+  .hero-gold-motif{
+    left:-6.2% !important;
+    bottom:18px !important;
+    width:117% !important;
+  }
+
+  .hero-green-wave{
+    height:36% !important;
+    bottom:12px !important;
+  }
+
+  .services-section{
+    margin-top:-60px !important;
+    padding-top:74px !important;
+  }
+
+  .services-pink-sweep{
+    top:-76px !important;
+    right:-17% !important;
+    width:65% !important;
+    height:138px !important;
+  }
+
+  .service-cards{
+    margin:-102px auto 0 !important;
+  }
+}
