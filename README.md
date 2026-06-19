@@ -232,3 +232,11 @@ webp7 layer fix:
 - Updated the hero green/gold wave SVG path so the green wave hides the extra gold stem and the sprout sits on the crest.
 - Lifted Our Services and all four service cards together.
 - Updated cache-busting query strings to webp7.
+
+webp8 layer/pink/cards fix:
+- Removed the previous webp7 override block and replaced it with one clean webp8 block.
+- Reduced the white logo/header height on mobile.
+- Restored the pink wave as a hero-level layer so it does not disappear behind the green/services section.
+- Kept the gold sprout and gold wave visible above the green layer.
+- Increased safe spacing so service cards no longer overlap the Our Services description.
+- Updated cache-busting query strings to webp8.
