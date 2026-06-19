@@ -253,3 +253,21 @@ webp25 mobile fix:
 - Moved the gold sprout motif further left on mobile.
 - Lowered mobile service cards so they do not cover the intro text.
 - Cache-busting query strings updated to webp25.
+
+webp26 mobile balance:
+- Base remains webp24/previous design with webp25 menu fix.
+- Replaced the webp25 final override with a cleaner webp26 block.
+- Kept mobile menu fixed.
+- Moved the gold sprout motif lower and further left on mobile.
+- Raised mobile service cards so the gap below the intro is smaller.
+- Desktop visual design is intentionally preserved.
+- Cache-busting query strings updated to webp26.
+
+webp28 mobile refinement:
+- Base remains previous design.
+- Kept mobile menu fix.
+- Made gold sprout motif visible by bringing it above the green/gold boundary layer.
+- Moved sprout motif left and slightly down as a bridge toward Our Services.
+- Raised mobile service cards moderately.
+- Desktop visual design is intentionally preserved.
+- Cache-busting query strings updated to webp28.

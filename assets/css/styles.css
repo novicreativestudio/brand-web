@@ -1403,14 +1403,14 @@ main,
 
 
 
-
-/* webp25 mobile menu + sprout position fix
-   Base remains webp24. Desktop visual design is intentionally preserved.
-   Mobile fixes:
-   - Make menu dropdown stable by width, not pointer/coarse only.
-   - Keep menu directly under the header, not floating over Services.
-   - Move gold sprout motif further left.
-   - Lower service cards so they do not cover the intro copy.
+/* webp28 mobile sprout visible + cards raised
+   Base remains webp24 previous design.
+   Desktop visual design is intentionally preserved.
+   Mobile:
+   - Keep the corrected mobile menu.
+   - Put the gold sprout motif above the green/gold boundary so it is visible.
+   - Move the motif left and down as a bridge toward Our Services.
+   - Raise cards moderately.
 */
 @media (max-width:1024px){
   .site-header{
@@ -1479,7 +1479,7 @@ main,
     position:absolute !important;
     left:18px !important;
     right:18px !important;
-    top:calc(100% + 10px) !important;
+    top:calc(100% + 8px) !important;
     z-index:1001 !important;
     display:grid !important;
     grid-template-columns:1fr !important;
@@ -1514,16 +1514,6 @@ main,
     color:#071327 !important;
   }
 
-  .site-nav a:not(.nav-cta){
-    background:transparent !important;
-  }
-
-  .site-nav a:not(.nav-cta):hover,
-  .site-nav a:not(.nav-cta):focus-visible{
-    background:#fbf1e6 !important;
-    transform:none !important;
-  }
-
   .site-nav .nav-cta{
     grid-column:1/-1 !important;
     margin-top:4px !important;
@@ -1532,15 +1522,10 @@ main,
     padding:13px 16px !important;
     border-radius:13px !important;
     color:#fff6d0 !important;
-    box-shadow:inset 0 1px 0 rgba(255,255,255,.16),0 5px 13px rgba(0,0,0,.13) !important;
   }
 }
 
 @media (max-width:640px){
-  .site-header{
-    z-index:1000 !important;
-  }
-
   .site-nav{
     left:18px !important;
     right:18px !important;
@@ -1571,17 +1556,29 @@ main,
     transform:translateY(-12px) rotate(-45deg) !important;
   }
 
+  .hero-visual{
+    overflow:visible !important;
+    z-index:20 !important;
+  }
+
   .hero-gold-motif{
-    left:-16% !important;
-    bottom:7px !important;
-    width:126% !important;
+    left:-20% !important;
+    bottom:-8px !important;
+    width:130% !important;
     min-width:0 !important;
-    opacity:.9 !important;
+    opacity:.96 !important;
+    z-index:26 !important;
+    mix-blend-mode:screen !important;
+  }
+
+  .hero-green-wave{
+    z-index:19 !important;
   }
 
   .services-section{
-    min-height:408px !important;
-    padding-bottom:112px !important;
+    z-index:2 !important;
+    min-height:342px !important;
+    padding-bottom:74px !important;
   }
 
   .services-copy{
@@ -1594,20 +1591,21 @@ main,
   }
 
   .service-cards{
-    margin:-62px auto 0 !important;
+    margin:-132px auto 0 !important;
   }
 }
 
 @media (max-width:430px){
   .hero-gold-motif{
-    left:-18.5% !important;
-    bottom:7px !important;
-    width:129% !important;
+    left:-23% !important;
+    bottom:-10px !important;
+    width:134% !important;
+    z-index:26 !important;
   }
 
   .services-section{
-    min-height:414px !important;
-    padding-bottom:118px !important;
+    min-height:344px !important;
+    padding-bottom:76px !important;
   }
 
   .services-copy{
@@ -1615,21 +1613,126 @@ main,
   }
 
   .service-cards{
-    margin:-58px auto 0 !important;
+    margin:-126px auto 0 !important;
+  }
+}
+
+@media (max-width:390px){
+  .hero-gold-motif{
+    left:-25% !important;
+    bottom:-10px !important;
+    width:138% !important;
+  }
+
+  .services-section{
+    min-height:348px !important;
+    padding-bottom:78px !important;
+  }
+
+  .service-cards{
+    margin-top:-120px !important;
+  }
+}
+
+/* webp28 mobile polish
+   Focused fixes only:
+   - restore the gold drop in the pink ribbon
+   - lower the FV sprout slightly so it bridges toward Our Services
+   - move cards down a little from the too-high webp27 state
+   - bring the gold sparkle closer to "purpose."
+   - enlarge the gold word slightly on mobile
+*/
+@media (max-width:1024px){
+  .top-ribbon{
+    z-index:1100 !important;
+    overflow:visible !important;
+  }
+
+  .ribbon-drop{
+    width:17px !important;
+    height:36px !important;
+    bottom:-16px !important;
+    z-index:1102 !important;
+    box-shadow:0 0 14px rgba(245,215,115,.34),0 2px 7px rgba(70,42,4,.34) !important;
+  }
+
+  .ribbon-drop::before{
+    top:-42px !important;
+    height:49px !important;
+  }
+}
+
+@media (max-width:640px){
+  .hero-gold-motif{
+    left:-18% !important;
+    bottom:-22px !important;
+    width:128% !important;
+    z-index:26 !important;
+  }
+
+  .hero-copy .gold-word{
+    font-size:1.12em !important;
+  }
+
+  .spark-two{
+    left:55.5% !important;
+    top:38.4% !important;
+  }
+
+  .services-section{
+    min-height:356px !important;
+    padding-bottom:86px !important;
+  }
+
+  .service-cards{
+    margin:-110px auto 0 !important;
+  }
+}
+
+@media (max-width:430px){
+  .ribbon-drop{
+    width:17px !important;
+    height:37px !important;
+    bottom:-17px !important;
+  }
+
+  .hero-gold-motif{
+    left:-20% !important;
+    bottom:-24px !important;
+    width:131% !important;
+  }
+
+  .hero-copy .gold-word{
+    font-size:1.14em !important;
+  }
+
+  .spark-two{
+    left:55.8% !important;
+    top:38.8% !important;
+  }
+
+  .services-section{
+    min-height:360px !important;
+    padding-bottom:88px !important;
+  }
+
+  .service-cards{
+    margin:-104px auto 0 !important;
   }
 }
 
 @media (max-width:390px){
   .hero-gold-motif{
     left:-21% !important;
-    width:132% !important;
+    bottom:-24px !important;
+    width:134% !important;
   }
 
   .services-section{
-    min-height:420px !important;
+    padding-bottom:90px !important;
   }
 
   .service-cards{
-    margin-top:-54px !important;
+    margin-top:-100px !important;
   }
 }
