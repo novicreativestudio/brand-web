@@ -828,8 +828,11 @@ body{
 
 @media (max-width:640px){
   .top-ribbon{
+    position:relative;
     width:100vw;
-    height:46px;
+    height:48px;
+    overflow:visible;
+    z-index:1200;
   }
 
   .top-ribbon p{
@@ -846,16 +849,18 @@ body{
   .top-ribbon p::after{right:-12px}
 
   .ribbon-drop{
-    width:17px;
-    height:36px;
-    bottom:-16px;
-    z-index:1102;
-    box-shadow:0 0 14px rgba(245,215,115,.34),0 2px 7px rgba(70,42,4,.34);
+    width:16px;
+    height:34px;
+    bottom:-17px;
+    z-index:1202;
+    overflow:visible;
+    clip-path:none;
+    box-shadow:0 0 13px rgba(245,215,115,.32),0 2px 7px rgba(70,42,4,.32);
   }
 
   .ribbon-drop::before{
-    top:-42px;
-    height:49px;
+    top:-39px;
+    height:45px;
   }
 
   .site-header{
@@ -1345,61 +1350,4 @@ body{
 .not-found .nav-cta{
   display:inline-block;
   min-width:180px;
-}
-
-
-/* webp34: gold ribbon drop only fix */
-.top-ribbon{
-  position:relative;
-  overflow:visible;
-  z-index:1200;
-}
-
-.site-header{
-  position:relative;
-  z-index:1000;
-}
-
-.ribbon-drop{
-  width:16px;
-  height:34px;
-  bottom:-17px;
-  z-index:1202;
-  overflow:visible;
-  border-radius:999px;
-  clip-path:none;
-  transform:none;
-  box-shadow:0 0 13px rgba(245,215,115,.32),0 2px 7px rgba(70,42,4,.32);
-}
-
-.ribbon-drop::before{
-  top:-39px;
-  height:45px;
-}
-
-@media (max-width:640px){
-  .top-ribbon{
-    height:48px;
-    overflow:visible;
-    z-index:1200;
-  }
-
-  .site-header{
-    z-index:1000;
-    overflow:visible;
-  }
-
-  .ribbon-drop{
-    width:16px;
-    height:34px;
-    bottom:-17px;
-    z-index:1202;
-    clip-path:none;
-    transform:none;
-  }
-
-  .ribbon-drop::before{
-    top:-39px;
-    height:45px;
-  }
 }

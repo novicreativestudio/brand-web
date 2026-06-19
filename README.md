@@ -293,8 +293,9 @@ webp33 production clean line fix:
 - No layout, menu, card, or desktop changes.
 - Cache-busting updated to webp33.
 
-webp34 gold drop only fix:
-- Based on webp33 production clean line fix.
-- Fixed only the gold drop on the pink ribbon.
+webp35 production clean integrated drop:
+- Based on webp33 production clean.
+- Gold drop fix is integrated into the existing ribbon/header/drop CSS rules.
+- No extra final webp34 override block.
 - No changes to hero, Our Services, cards, menu, or desktop layout.
-- Cache-busting updated to webp34.
+- Cache-busting updated to webp35.
