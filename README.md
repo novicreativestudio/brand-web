@@ -225,3 +225,10 @@ Mobile polish webp5:
 - Positioned sprout on the crest of the gold wave while hiding the extra stem.
 - Raised Our Services section balance.
 - Cache-busting query strings updated to webp5.
+
+webp7 layer fix:
+- Removed old webp5/webp6 override blocks and replaced them with one clean final block.
+- Fixed FV layering: hero decoration now sits above the Services green/pink layers.
+- Updated the hero green/gold wave SVG path so the green wave hides the extra gold stem and the sprout sits on the crest.
+- Lifted Our Services and all four service cards together.
+- Updated cache-busting query strings to webp7.
