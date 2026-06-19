@@ -271,3 +271,9 @@ webp28 mobile refinement:
 - Raised mobile service cards moderately.
 - Desktop visual design is intentionally preserved.
 - Cache-busting query strings updated to webp28.
+
+webp31 mobile card-gap fix:
+- Based on webp30.
+- Kept: mobile no-sprout design, pink Our Services label, sparkle treatment, menu fix, desktop layout.
+- Adjusted only mobile vertical spacing: raised service cards from the too-low webp30 position while preserving space below the intro.
+- Cache-busting updated to webp31.
