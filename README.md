@@ -233,50 +233,15 @@ webp7 layer fix:
 - Lifted Our Services and all four service cards together.
 - Updated cache-busting query strings to webp7.
 
-webp8 layer/pink/cards fix:
-- Removed the previous webp7 override block and replaced it with one clean webp8 block.
-- Reduced the white logo/header height on mobile.
-- Restored the pink wave as a hero-level layer so it does not disappear behind the green/services section.
-- Kept the gold sprout and gold wave visible above the green layer.
-- Increased safe spacing so service cards no longer overlap the Our Services description.
-- Updated cache-busting query strings to webp8.
 
-webp9 CSS cleanup + cache:
-- Removed the old webp8 mobile override block and replaced it with one clean webp9 block.
-- Converted the mobile pink accent from a rectangle-like div into an SVG wave.
-- Lowered the pink wave so it appears as a curved accent, not a block over the hero image.
-- Slightly reduced mobile logo/header height.
-- Kept card spacing safe under the services description.
-- Updated all cache-busting query strings to webp9.
+webp24 previous desktop design + light images:
+- Base restored to the previous design that matched the user's reference.
+- Layout/CSS was not redesigned.
+- Large visual image assets were recompressed/converted to lighter WebP versions.
+- Cache-busting query strings updated to webp24.
 
-webp10 desktop-safe cache update:
-- Removed the webp9 override block and replaced it with a desktop-safe mobile-only block.
-- Added default .hero-pink-wave { display:none; } so the new SVG cannot show on desktop.
-- Moved ribbon/drop size overrides inside max-width:640px so desktop header/drop sizing is not changed.
-- Cache-busting query strings updated to webp10.
-
-webp11 recovery:
-- Removed previous webp10 override and replaced it with one clean desktop-safe mobile block.
-- Removed the extra hero-pink-wave HTML/SVG layer entirely.
-- Returned the pink accent to the services layer so it no longer covers the hero image.
-- Kept desktop protected and cache-busting updated to webp11.
-
-webp12:
-- moved the gold sprout/light motif further left on mobile so the sprout stem sits closer to the gold dashed hill peak
-- raised the pink sweep on mobile so it sits higher behind the services header
-- cache bust updated to webp12
-
-webp13 no-pink-wave:
-- Removed old webp11/webp12 mobile override blocks and replaced them with one clean webp13 block.
-- Removed the large pink wave from the FV/services boundary.
-- Kept pink only as a subtle hand-drawn underline under Our Services.
-- Moved the gold sprout motif further left for better balance and closer alignment with the gold wave peak.
-- Cache-busting query strings updated to webp13.
-
-webp14 small-pink + sprout-left:
-- Removed previous webp13 override block and replaced it with one clean webp14 block.
-- Added a small right-side pink accent similar to the desktop feel, without a large pink wave.
-- Removed the pink underline under Our Services.
-- Moved the gold sprout motif much further left because the previous move was not visually enough.
-- Added a narrow desktop/tablet-width rule so the sprout position also changes in desktop-like previews.
-- Cache-busting query strings updated to webp14.
+Image optimization summary:
+- novi-creative-studio-logo-mark.png: 672,037 -> 672,037 bytes (kept)
+- novi-creative-studio-hero-desktop.webp: 50,222 -> 45,806 bytes (recompressed webp)
+- novi-creative-studio-hero-mobile-optimized.webp: 29,640 -> 27,392 bytes (recompressed webp)
+- novi-creative-studio-gold-leaf-light-motif.webp: 56,770 -> 55,334 bytes (recompressed webp)
