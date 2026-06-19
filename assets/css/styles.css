@@ -1379,3 +1379,292 @@ main,
     height:122px !important;
   }
 }
+
+
+/* webp4 final mobile polish
+   - restore smaller gold drop while keeping it fully visible
+   - restore CREATIVE STUDIO under NOVI on mobile
+   - move sparkle flakes away from text
+   - make the gold wave visible again
+   - align sprout with the crest of the gold wave
+   - keep green and pink as visible waves
+*/
+.top-ribbon,
+.site-header{
+  overflow:visible !important;
+}
+
+.ribbon-drop{
+  width:18px !important;
+  height:38px !important;
+  bottom:-22px !important;
+  z-index:80 !important;
+  box-shadow:0 0 16px rgba(245,215,115,.32),0 2px 7px rgba(70,42,4,.36) !important;
+}
+.ribbon-drop::before{
+  top:-43px !important;
+  height:51px !important;
+}
+
+@media (max-width:640px){
+  .top-ribbon,
+  .site-header{
+    overflow:visible !important;
+  }
+
+  .ribbon-drop{
+    width:18px !important;
+    height:38px !important;
+    bottom:-22px !important;
+  }
+
+  .site-header{
+    min-height:108px !important;
+    padding-inline:20px !important;
+  }
+
+  .brand{
+    gap:12px !important;
+    align-items:center !important;
+  }
+
+  .brand-mark{
+    width:58px !important;
+    height:58px !important;
+  }
+
+  .brand-text{
+    display:grid !important;
+    grid-template-columns:max-content !important;
+    min-width:0 !important;
+    width:max-content !important;
+    align-items:start !important;
+  }
+
+  .brand-text strong{
+    font-size:30px !important;
+    line-height:.96 !important;
+    letter-spacing:.15em !important;
+    transform:none !important;
+  }
+
+  .brand-text small{
+    display:block !important;
+    justify-self:center !important;
+    width:100% !important;
+    margin-top:7px !important;
+    font-size:8.4px !important;
+    line-height:1 !important;
+    letter-spacing:.13em !important;
+    text-align:center !important;
+    transform:translateX(-.08em) !important;
+  }
+
+  .hero-visual{
+    height:220px !important;
+    min-height:220px !important;
+    overflow:hidden !important;
+  }
+
+  .hero-picture img{
+    object-fit:cover !important;
+    object-position:56% 0% !important;
+    transform:none !important;
+  }
+
+  .hero-copy{
+    left:6.2% !important;
+    top:24.5% !important;
+    width:56% !important;
+    max-width:228px !important;
+  }
+
+  .hero-copy h1{
+    font-size:22px !important;
+    line-height:1.02 !important;
+  }
+
+  .spark-three{
+    left:3.8% !important;
+    top:39% !important;
+    z-index:8 !important;
+  }
+
+  .spark-two{
+    left:62% !important;
+    top:32% !important;
+    z-index:8 !important;
+  }
+
+  .hero-gold-motif{
+    z-index:12 !important;
+    left:-3.5% !important;
+    bottom:-1px !important;
+    width:110% !important;
+    min-width:0 !important;
+    opacity:.98 !important;
+    transform:none !important;
+    mix-blend-mode:screen !important;
+  }
+
+  .hero-green-wave{
+    z-index:11 !important;
+    height:24% !important;
+    bottom:-4px !important;
+    opacity:1 !important;
+  }
+
+  .hero-gold-line{
+    stroke:#f3d16f !important;
+    stroke-width:14.5 !important;
+    opacity:1 !important;
+    filter:drop-shadow(0 0 8px rgba(245,215,115,.42)) !important;
+  }
+
+  .hero-gold-dash{
+    opacity:.55 !important;
+  }
+
+  .services-section{
+    margin-top:-22px !important;
+    padding-top:78px !important;
+  }
+
+  .services-pink-sweep{
+    top:-46px !important;
+    right:-13% !important;
+    width:59% !important;
+    height:122px !important;
+    border-top:3px solid rgba(239,202,101,.85) !important;
+    border-radius:0 0 0 100%/0 0 0 100% !important;
+  }
+
+  .services-copy{
+    margin-top:0 !important;
+  }
+}
+
+@media (max-width:430px){
+  .site-header{
+    min-height:106px !important;
+  }
+
+  .brand-mark{
+    width:55px !important;
+    height:55px !important;
+  }
+
+  .brand-text strong{
+    font-size:28px !important;
+    letter-spacing:.145em !important;
+  }
+
+  .brand-text small{
+    display:block !important;
+    font-size:7.7px !important;
+    letter-spacing:.12em !important;
+    margin-top:6px !important;
+    transform:translateX(-.1em) !important;
+  }
+
+  .hero-visual{
+    height:205px !important;
+    min-height:205px !important;
+  }
+
+  .hero-copy{
+    left:6% !important;
+    top:25.5% !important;
+    max-width:212px !important;
+  }
+
+  .hero-copy h1{
+    font-size:21px !important;
+    line-height:1.02 !important;
+  }
+
+  .spark-three{
+    left:3.4% !important;
+    top:40.5% !important;
+  }
+
+  .spark-two{
+    left:63% !important;
+    top:33% !important;
+  }
+
+  .hero-gold-motif{
+    left:-4.2% !important;
+    bottom:0 !important;
+    width:112% !important;
+  }
+
+  .hero-green-wave{
+    height:25% !important;
+    bottom:-4px !important;
+  }
+
+  .services-section{
+    margin-top:-24px !important;
+    padding-top:80px !important;
+  }
+
+  .services-pink-sweep{
+    top:-48px !important;
+    right:-15% !important;
+    width:61% !important;
+    height:124px !important;
+  }
+}
+
+@media (max-width:390px){
+  .brand-mark{
+    width:52px !important;
+    height:52px !important;
+  }
+
+  .brand-text strong{
+    font-size:26px !important;
+  }
+
+  .brand-text small{
+    display:block !important;
+    font-size:7.1px !important;
+  }
+
+  .hero-visual{
+    height:198px !important;
+    min-height:198px !important;
+  }
+
+  .hero-copy{
+    left:5.8% !important;
+    top:26% !important;
+    max-width:202px !important;
+  }
+
+  .hero-copy h1{
+    font-size:20px !important;
+  }
+
+  .hero-gold-motif{
+    left:-4.6% !important;
+    bottom:1px !important;
+    width:113% !important;
+  }
+
+  .hero-green-wave{
+    height:25.5% !important;
+  }
+
+  .services-section{
+    margin-top:-25px !important;
+    padding-top:80px !important;
+  }
+
+  .services-pink-sweep{
+    top:-50px !important;
+    width:62% !important;
+    height:126px !important;
+  }
+}

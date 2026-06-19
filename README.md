@@ -205,3 +205,11 @@ Mobile fix webp2:
 - Trimmed mobile FV height and object positioning to cut the lower photo area closer to the gold line.
 - Restored service cards to 2 columns on mobile.
 - Updated cache-busting query strings to webp2.
+
+Mobile polish webp4:
+- Restored smaller gold drop size and kept it visible.
+- Restored CREATIVE STUDIO under NOVI on mobile.
+- Moved decorative gold sparkles away from the FV text.
+- Restored and emphasized the gold wave line.
+- Aligned the sprout motif with the crest of the gold wave.
+- Adjusted green/pink waves to remain visible as waves.
