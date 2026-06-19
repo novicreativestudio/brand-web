@@ -1736,3 +1736,222 @@ main,
     margin-top:-100px !important;
   }
 }
+
+
+/* webp29 mobile simplification
+   - remove the separate sprout motif on mobile
+   - frame Our Services with a pink label
+   - add a few extra sparkles in the FV on mobile only */
+.hero-spark.spark-four,
+.hero-spark.spark-five{display:none;}
+
+@media (max-width:640px){
+  .hero-gold-motif{display:none !important;}
+
+  .spark-two{
+    left:57.2% !important;
+    top:38.1% !important;
+  }
+
+  .spark-three{
+    left:4.6% !important;
+    top:45.8% !important;
+  }
+
+  .hero-spark.spark-four,
+  .hero-spark.spark-five{
+    display:block !important;
+  }
+
+  .spark-four{
+    left:46.8% !important;
+    top:31.8% !important;
+    width:7px !important;
+    height:7px !important;
+    animation-delay:.55s !important;
+  }
+
+  .spark-five{
+    left:59.4% !important;
+    top:27.4% !important;
+    width:5px !important;
+    height:5px !important;
+    animation-delay:1.85s !important;
+    opacity:.72 !important;
+  }
+
+  .services-copy .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:auto;
+    max-width:calc(100% - 40px);
+    padding:11px 22px 10px;
+    margin:0 auto 14px;
+    border-radius:10px;
+    background:linear-gradient(180deg,#da8ca3 0%,#cc7891 100%);
+    border:1px solid rgba(241,206,115,.34);
+    box-shadow:0 10px 20px rgba(100,25,49,.18), inset 0 1px 0 rgba(255,255,255,.26);
+    letter-spacing:.34em;
+    line-height:1;
+    text-shadow:none;
+    transform:none;
+  }
+
+  .divider{
+    margin:10px auto 12px;
+  }
+}
+
+@media (max-width:430px){
+  .services-copy .eyebrow{
+    padding:10px 18px 9px;
+    letter-spacing:.3em;
+  }
+
+  .spark-four{
+    left:47.6% !important;
+    top:32.4% !important;
+  }
+
+  .spark-five{
+    left:60.4% !important;
+    top:27.8% !important;
+  }
+}
+
+@media (max-width:390px){
+  .services-copy .eyebrow{
+    padding:10px 16px 9px;
+    letter-spacing:.27em;
+  }
+}
+
+
+/* webp30 mobile polish
+   - keep the simplified mobile hero without the separate sprout
+   - make "purpose." slightly larger
+   - return FV sparkles to a cleaner balance
+   - add subtle sparkle accents around the pink Our Services label
+   - push the service cards lower so they do not overlap the intro text */
+@media (max-width:640px){
+  .hero-spark.spark-four,
+  .hero-spark.spark-five{
+    display:none !important;
+  }
+
+  .spark-two{
+    left:54.2% !important;
+    top:39.1% !important;
+  }
+
+  .hero-copy .gold-word{
+    font-size:1.22em !important;
+  }
+
+  .services-section{
+    min-height:446px !important;
+    padding-bottom:122px !important;
+  }
+
+  .services-copy{
+    position:relative;
+    margin-top:0 !important;
+  }
+
+  .services-copy .tiny-star{
+    display:block !important;
+    margin:0 auto 10px !important;
+    font-size:14px !important;
+    line-height:1 !important;
+    color:var(--gold-light) !important;
+    text-shadow:0 0 14px rgba(245,215,115,.42) !important;
+    animation:sparkPulse 2.6s ease-in-out infinite !important;
+  }
+
+  .services-copy .eyebrow{
+    position:relative;
+    margin:0 auto 18px !important;
+    padding:12px 26px 11px !important;
+  }
+
+  .services-copy .eyebrow::before,
+  .services-copy .eyebrow::after{
+    content:"✦";
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:13px;
+    line-height:1;
+    color:var(--gold-light);
+    text-shadow:0 0 14px rgba(245,215,115,.4);
+    animation:sparkPulse 2.6s ease-in-out infinite;
+    pointer-events:none;
+  }
+
+  .services-copy .eyebrow::before{
+    left:-20px;
+    animation-delay:.3s;
+  }
+
+  .services-copy .eyebrow::after{
+    right:-20px;
+    animation-delay:1.2s;
+  }
+
+  .divider{
+    margin:10px auto 16px !important;
+  }
+
+  .service-cards{
+    width:calc(100% - 34px) !important;
+    margin:-64px auto 0 !important;
+  }
+}
+
+@media (max-width:430px){
+  .hero-copy .gold-word{
+    font-size:1.24em !important;
+  }
+
+  .spark-two{
+    left:54.4% !important;
+    top:39.4% !important;
+  }
+
+  .services-section{
+    min-height:462px !important;
+    padding-bottom:126px !important;
+  }
+
+  .services-copy .eyebrow{
+    padding:11px 24px 10px !important;
+  }
+
+  .services-copy .eyebrow::before{
+    left:-18px;
+  }
+
+  .services-copy .eyebrow::after{
+    right:-18px;
+  }
+
+  .service-cards{
+    margin:-56px auto 0 !important;
+  }
+}
+
+@media (max-width:390px){
+  .hero-copy .gold-word{
+    font-size:1.22em !important;
+  }
+
+  .services-section{
+    min-height:476px !important;
+    padding-bottom:132px !important;
+  }
+
+  .service-cards{
+    margin:-46px auto 0 !important;
+  }
+}
