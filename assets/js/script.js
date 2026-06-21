@@ -31,9 +31,9 @@
   }
 
   const trust = document.querySelector('.trust-section');
-  if (!trust) return;
 
   const countNumbers = () => {
+    if (!trust) return;
     trust.querySelectorAll('[data-count]').forEach((el) => {
       if (el.dataset.done) return;
       el.dataset.done = 'true';
@@ -54,18 +54,22 @@
     });
   };
 
+  const observedSections = document.querySelectorAll('.trust-section, .observed-section');
+  if (!observedSections.length) return;
+
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
-        trust.classList.add('in-view');
-        countNumbers();
-        observer.disconnect();
+        entry.target.classList.add('in-view');
+        if (entry.target === trust) countNumbers();
+        observer.unobserve(entry.target);
       });
-    }, { threshold: 0.2 });
-    observer.observe(trust);
+    }, { threshold: 0.18 });
+
+    observedSections.forEach((section) => observer.observe(section));
   } else {
-    trust.classList.add('in-view');
+    observedSections.forEach((section) => section.classList.add('in-view'));
     countNumbers();
   }
 })();
