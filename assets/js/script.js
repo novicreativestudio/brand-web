@@ -30,46 +30,80 @@
     });
   }
 
-  const trust = document.querySelector('.trust-section');
+  const proofPanel = document.querySelector('.trust-proof-panel');
+  const graphWrap = document.querySelector('.trust-graph-wrap');
 
   const countNumbers = () => {
-    if (!trust) return;
-    trust.querySelectorAll('[data-count]').forEach((el) => {
-      if (el.dataset.done) return;
-      el.dataset.done = 'true';
+    if (!proofPanel || proofPanel.dataset.counted === 'true') return;
+    proofPanel.dataset.counted = 'true';
+
+    proofPanel.querySelectorAll('[data-count]').forEach((el) => {
       const target = Number(el.dataset.count);
       const isDecimal = !Number.isInteger(target);
-      const duration = 1100;
+      const duration = 1150;
       const start = performance.now();
+
+      el.textContent = '0';
 
       const tick = (now) => {
         const progress = Math.min((now - start) / duration, 1);
         const eased = 1 - Math.pow(1 - progress, 3);
         const value = target * eased;
+
         el.textContent = isDecimal ? value.toFixed(1) : String(Math.round(value));
-        if (progress < 1) requestAnimationFrame(tick);
-        else el.textContent = isDecimal ? target.toFixed(1) : String(target);
+
+        if (progress < 1) {
+          requestAnimationFrame(tick);
+        } else {
+          el.textContent = isDecimal ? target.toFixed(1) : String(target);
+        }
       };
+
       requestAnimationFrame(tick);
     });
   };
 
   const observedSections = document.querySelectorAll('.trust-section, .observed-section');
-  if (!observedSections.length) return;
 
   if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('in-view');
-        if (entry.target === trust) countNumbers();
-        observer.unobserve(entry.target);
-      });
-    }, { threshold: 0.18 });
+    if (observedSections.length) {
+      const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('in-view');
+          sectionObserver.unobserve(entry.target);
+        });
+      }, { threshold: 0.18, rootMargin: '0px 0px -8% 0px' });
 
-    observedSections.forEach((section) => observer.observe(section));
+      observedSections.forEach((section) => sectionObserver.observe(section));
+    }
+
+    if (proofPanel) {
+      const countObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          countNumbers();
+          countObserver.disconnect();
+        });
+      }, { threshold: 0.55, rootMargin: '0px 0px -18% 0px' });
+
+      countObserver.observe(proofPanel);
+    }
+
+    if (graphWrap) {
+      const graphObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          graphWrap.classList.add('graph-in-view');
+          graphObserver.disconnect();
+        });
+      }, { threshold: 0.45, rootMargin: '0px 0px -12% 0px' });
+
+      graphObserver.observe(graphWrap);
+    }
   } else {
     observedSections.forEach((section) => section.classList.add('in-view'));
+    if (graphWrap) graphWrap.classList.add('graph-in-view');
     countNumbers();
   }
 })();
