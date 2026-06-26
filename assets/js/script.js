@@ -52,11 +52,8 @@
 
         el.textContent = isDecimal ? value.toFixed(1) : String(Math.round(value));
 
-        if (progress < 1) {
-          requestAnimationFrame(tick);
-        } else {
-          el.textContent = isDecimal ? target.toFixed(1) : String(target);
-        }
+        if (progress < 1) requestAnimationFrame(tick);
+        else el.textContent = isDecimal ? target.toFixed(1) : String(target);
       };
 
       requestAnimationFrame(tick);
@@ -64,6 +61,7 @@
   };
 
   const observedSections = document.querySelectorAll('.trust-section, .observed-section');
+  const serviceCards = document.querySelector('.observed-service-cards');
 
   if ('IntersectionObserver' in window) {
     if (observedSections.length) {
@@ -76,6 +74,18 @@
       }, { threshold: 0.18, rootMargin: '0px 0px -8% 0px' });
 
       observedSections.forEach((section) => sectionObserver.observe(section));
+    }
+
+    if (serviceCards) {
+      const serviceObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('services-in-view');
+          serviceObserver.disconnect();
+        });
+      }, { threshold: 0.22, rootMargin: '0px 0px -12% 0px' });
+
+      serviceObserver.observe(serviceCards);
     }
 
     if (proofPanel) {
@@ -103,6 +113,7 @@
     }
   } else {
     observedSections.forEach((section) => section.classList.add('in-view'));
+    if (serviceCards) serviceCards.classList.add('services-in-view');
     if (graphWrap) graphWrap.classList.add('graph-in-view');
     countNumbers();
   }
