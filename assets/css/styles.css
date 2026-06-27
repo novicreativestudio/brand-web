@@ -4596,3 +4596,37 @@ body{
     font-size:18px;
   }
 }
+
+
+/* v82 mobile performance guard: keep the visual direction, reduce mobile-only paint cost. */
+@media (max-width: 720px) {
+  .hero-picture img,
+  .hero-gold-motif,
+  .hero-green-wave,
+  .trust-wave-gold,
+  .trust-bottom-gold,
+  .about-frame-gold,
+  .about-bottom-gold {
+    filter: none !important;
+  }
+
+  .top-ribbon p::before,
+  .top-ribbon p::after,
+  .ribbon-drop,
+  .hero-spark,
+  .glow-window {
+    animation-duration: 8s !important;
+  }
+
+  .brand,
+  .service-card,
+  .choose-card,
+  .promise-card,
+  .launch-score-card,
+  .launch-proof-images figure,
+  .difference-table,
+  .process-steps article,
+  .faq-grid article {
+    box-shadow: 0 10px 24px rgba(7,20,45,.07) !important;
+  }
+}
